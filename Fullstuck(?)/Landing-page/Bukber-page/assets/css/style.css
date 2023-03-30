@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+.text-poppins {
+  font-family: 'Poppins';
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 999;
+}
+.nav-container.active {
+  background-color: #fff;
+  box-shadow: 0 2px 25px rgba(0,0,0,0.1);
+}
+.nav-container a:hover {
+  text-decoration: none;
+}
+.nav-container .nav-logo {
+  position: relative;
+  margin: auto 0;
+}
+.nav-container .nav-logo h3 {
+  margin: 0;
+  padding: 0;
+}
+.nav-container .nav-logo h3 a {
+  font-family: Anton-Regular;
+  font-weight: 400;
+  color: #fff;
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+}
+.nav-container.active .nav-logo h3 a {
+  font-family: Anton-Regular;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.nav-container .nav-box {
+  position: relative;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+.nav-container .nav-box1 .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0;
+  list-style: none;
+}
+.nav-container .nav-box1 .nav-list li {
+  position: relative;
+  padding: 10px 12px;
+  text-align: center;
+  transition: 0.5s ease;
+  border-radius: 4px;
+}
+.nav-container .nav-box1 .nav-list li.active {
+  background-color: #8abeb7;
+}
+.nav-container .nav-box1 .nav-list li.active a,
+.nav-container .nav-box1 .nav-list li.active i,
+.nav-container.active .nav-box1 .nav-list li.active a,
+.nav-container.active .nav-box1 .nav-list li.active i {
+  color: #fff;
+}
+.nav-container .nav-box1 .nav-list li a {
+  display: flex;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+.nav-container .nav-box1 .nav-list li a i {
+  display: none;
+}
+.nav-container .nav-box2 {
+  position: relative;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container .nav-box2 .nav-box-icon {
+  position: relative;
+  margin: auto 10px;
+}
+.nav-container .nav-box2 .nav-box-icon a i {
+  color: #fff;
+  font-size: 19px;
+  margin: 0 2px;
+  transition: 0.5s ease;
+}
+.nav-container.active .nav-box2 .nav-box-icon a i {
+  color: silver;
+}
+.nav-container .nav-box2 .nav-box-icon a i:hover {
+  color: #1C3B5A;
+  transform: scale(1.1);
+}
+.nav-container .nav-box2 .nav-toggle {
+  display: none;
+}
+.container-custom {
+  position: relative;
+  margin: 0 30px;
+  overflow: hidden;
+}
+.text-lightgreen {
+  color: #8abeb7;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.header .header-content {
+  margin: 100px 0 40px 0;
+}
+.button {
+  position: relative;
+  padding: 15px 20px;
+  background: transparent;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.button:hover {
+  text-decoration: none;
+  color: #000;
+}
+.button-lightgreen {
+  background-color: #8abeb7;
+  color: #fff;
+}
+.button-lightgreen:hover {
+  color: #fff;
+}
+.courses {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.courses .courses-content {
+  margin: 100px 0 30px 0;
+  padding: 0 30px;
+}
+.courses .courses-content .card-courses {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 10px 0;
+}
+.courses .courses-content .card-courses .card-courses-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.courses .courses-content .card-courses .card-courses-header img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.courses .courses-content .card-courses .card-courses-body {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #8abeb7;
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.courses .courses-content .card-courses:hover .card-courses-body {
+  bottom: 0;
+}
+.service {
+  position: relative;
+  width: 100%;
+  background-color: #8abeb7;
+  overflow: hidden;
+}
+.service .service-content {
+  margin: 100px 0 100px 0;
+}
+.service .service-content .card-service {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.service .service-content .card-service .card-service-header {
+  position: relative;
+  width: 50%;
+}
+.service .service-content .card-service .card-service-header img {
+  position: relative;
+  width: 55%;
+  height: 100%;
+  object-fit: cover;
+}
+.service .service-content .card-service .card-service-body {
+  width: 50%;
+}
+.testimonial {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.testimonial .testimonial-content {
+  margin: 100px 0 40px 0;
+}
+.testimonial .testimonial-content .card-testi {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 1px 2px 2px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 10px 0;
+}
+.testimonial .testimonial-content .card-testi .card-testi-header {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-color: #8abeb7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial .testimonial-content .card-testi .card-testi-header img {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10%;
+}
+.testimonial .testimonial-content .card-testi .card-testi-body {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #8abeb7;
+  padding: 50px 30px;
+  overflow: hidden;
+}
+.footer a:hover {
+  text-decoration: none;
+}
+.footer .footer-content .footer-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-start;
+}
+.footer .footer-content .footer-logo h4 {
+  margin: auto 0;
+}
+.footer .footer-content .footer-link {
+  position: relative;
+  margin: 10px auto;
+}
+.footer .footer-content .footer-link a {
+  position: relative;
+  margin: 0 5px;
+}
+.footer .footer-content .footer-icon a {
+  position: relative;
+  margin: 0 10px;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .nav-container .nav-box1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 52%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+    transform: translateX(-100%);
+  }
+  .nav-container .nav-box1.active {
+    transform: translateX(0);
+    box-shadow: 0 2px 25px rgba(0,0,0,0.1);
+  }
+  .nav-container .nav-box1 .nav-list {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40vh;
+    margin: 80% 0;
+  }
+  .nav-container .nav-box1 .nav-list li {
+    width: 100%;
+    text-align: left;
+    padding: 15px 24px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0;
+  }
+  .nav-container .nav-box1 .nav-list li.active {
+    background-color: #8abeb7;
+  }
+  .nav-container .nav-box1 .nav-list li a {
+    font-size: 14px;
+    color: #000;
+  }
+  .nav-container .nav-box1 .nav-list li.active a {
+    font-size: 14px;
+    color: #fff;
+  }
+  .nav-container .nav-box1 .nav-list li a i {
+    display: flex;
+  }
+  .nav-container .nav-box2 {
+    display: flex;
+  }
+  .nav-container .nav-box2 .nav-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .nav-container .nav-box2 .nav-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition: 0.5s ease;
+    margin: 2px 0;
+    border-radius: 4px;
+  }
+  .header {
+    height: 100vh;
+  }
+  .courses .courses-content {
+    padding: 0;
+  }
+  .service .service-content .card-service {
+    flex-direction: column;
+    text-align: center;
+    height: 500px;
+  }
+  .service .service-content .card-service .card-service-header img {
+    width: 250px;
+  }
+  .service .service-content .card-service .card-service-body {
+    width: 100%;
+  }
