@@ -16,6 +16,4 @@
 
 ![preview3](https://user-images.githubusercontent.com/65320033/221648652-57fc8bec-456a-4229-88ed-cc509785e555.png)
 
-PS: PROJECT MIGRATE TO FUNDAMENTAL-PEMROGRAMAN.
-
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
