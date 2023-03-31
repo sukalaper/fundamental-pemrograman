@@ -15,7 +15,7 @@ void playGame(int randomNumber){
         } else if(playerGuess < randomNumber) {
           std::cout<<"Angka terlalu rendah, silahkan coba lagi."<<'\n';
         } else {
-          std::cout<<"Selamat, Anda benar dengan"<<guessCount << " percobaan!"<<'\n';
+          std::cout<<"Selamat, Anda benar dengan"<<guessCount<<"percobaan!"<<'\n';
           break;
         }
     }
