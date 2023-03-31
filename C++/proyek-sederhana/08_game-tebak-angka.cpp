@@ -6,16 +6,16 @@ int generateRandomNumber(){
 }
 
 void playGame(int randomNumber){
-  int player_guess, guess_count = 0;
+  int playerGuess, guessCount = 0;
     while(true){
-      std::cout<<"Masukan tebakan Anda: ";std::cin >> player_guess;
+      std::cout<<"Masukan tebakan Anda: ";std::cin >> playerGuess;
       guess_count++;
         if(player_guess > randomNumber) {
           std::cout<<"Angka terlalu tinggi, silahkan coba lagi."<<'\n';
         } else if(player_guess < randomNumber) {
           std::cout<<"Angka terlalu rendah, silahkan coba lagi."<<'\n';
         } else {
-          std::cout<<"Selamat, Anda benar dengan"<<guess_count << " percobaan!"<<'\n';
+          std::cout<<"Selamat, Anda benar dengan"<<guessCount << " percobaan!"<<'\n';
           break;
         }
     }
