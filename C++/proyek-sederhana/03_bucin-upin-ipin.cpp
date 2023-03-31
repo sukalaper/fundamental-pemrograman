@@ -26,6 +26,7 @@ std::string cartoonTwo() {
 }
 
 int main(int argc, char *argv[]){
- cartoonOne();
- cartoonTwo();
+  cartoonOne();
+  cartoonTwo();
+  return 0;
 }
