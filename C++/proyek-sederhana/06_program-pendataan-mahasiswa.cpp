@@ -64,6 +64,5 @@ int main(int argc, char *argv[]){
     }
     std::cout<<'\n'<<"Ingin mengulang [y/t]: "; std::cin>>ulang;
   }while(ulang == 'Y' || ulang == 'y');
-  
-   return 0;
+  return 0;
 }
