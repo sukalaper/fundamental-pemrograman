@@ -1,24 +1,31 @@
 #include <iostream>
 #include <string>
 
-static const char ALNUM[] = 
-"0123456789" 
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-"abcdefghijklmnopqrstuvwxyz"
-"@#$_&+()!?*";
+const std::string ALNUM = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$_&+()!?*";
 
-int myLen = sizeof(ALNUM) - 1;
-
-char randomStr() {
-  return ALNUM[rand() % myLen];
+int getRandomIndex(int maxIndex) {
+  return rand() % maxIndex;
 }
 
-int main(int argc, char *argv[]){
+int getLengthFromUser() {
+  int length;
+  std::cout << "Masukan angka: ";
+  std::cin >> length;
+  return length;
+}
+
+std::string generateRandomString(int length) {
+  std::string randomStr;
+  for (int i = 0; i < length; ++i) {
+    randomStr += ALNUM[getRandomIndex(ALNUM.size())];
+  }
+  return randomStr;
+}
+
+int main(int argc, char *argv[]) {
   srand(time(0));
-  int l;
-  std::cout<<"Masukan angka: ";std::cin>>l;
-    for(int m = 0; m < l; m++) {
-      std::cout<<randomStr();
-    }
+  int length = getLengthFromUser();
+  std::string randomString = generateRandomString(length);
+  std::cout << randomString;
   return 0;
 }
