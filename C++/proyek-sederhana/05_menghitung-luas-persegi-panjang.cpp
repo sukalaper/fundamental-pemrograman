@@ -1,26 +1,27 @@
 #include <iostream>
 
-int getInputFromUser(){
-  int panjang;
-  std::cout<<"Masukan panjang: "; 
-  std::cin>>panjang;
-  return panjang;
+int getInputFromUser(const std::string& message) {
+  int input;
+  std::cout << message;
+  std::cin >> input;
+  return input;
 }
 
-int getInputFromUser2(){
-  int lebar;
-  std::cout<<"Masukan lebar: ";
-  std::cin>>lebar;
-  return lebar;
+int hitungLuas(int panjang, int lebar) {
+  return panjang * lebar;
 }
 
-int ResultPanjang = getInputFromUser();
-int ResultLebar = getInputFromUser2();
-int LUAS = ResultPanjang+ResultLebar;
-const int KELILING = 2*(ResultPanjang+ResultLebar);
+int hitungKeliling(int panjang, int lebar) {
+  return 2 * (panjang + lebar);
+}
 
-int main(int argc, char *argv[]){
-  std::cout<<"Luas: "<<LUAS<<'\n';
-  std::cout<<"Keliling: "<<KELILING;
+int main(int argc, char *argv[]) {
+  int panjang = getInputFromUser("Masukkan panjang: ");
+  int lebar = getInputFromUser("Masukkan lebar: ");
+  int luas = hitungLuas(panjang, lebar);
+  int keliling = hitungKeliling(panjang, lebar);
+
+  std::cout << "Luas: " << luas << '\n';
+  std::cout << "Keliling: " << keliling << '\n';
   return 0;
 }
