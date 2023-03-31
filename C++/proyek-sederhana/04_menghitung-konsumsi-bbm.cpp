@@ -26,4 +26,5 @@ int main(int argc, char *argv[]){
   double resultIsi = isiTangkiAwal();
   double resultAkhir = isiTangkiAkhir();
   std::cout<<"Jumlah konsumsi BBM adalah: "<<std::setprecision(3)<<(resultIsi-resultAkhir)/resultTangki;
+  return 0;
 }
