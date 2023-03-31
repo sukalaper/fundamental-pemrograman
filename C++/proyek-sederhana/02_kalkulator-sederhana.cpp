@@ -6,34 +6,39 @@ char getOperatorFromUser(){
   return userInput;
 }
 
-int getResultFromUser1(){
-  int numberOne;
-  std::cout<<"Masukan angka pertama: ";std::cin>>numberOne;
-  return numberOne;
+int getResultFromUser(const std::string& message){
+  int result;
+  std::cout<<message;std::cin>>result;
+  return result;
 }
 
-int getResultFromUser2(){
-  int numberTwo;
-  std::cout<<"Masukan angka kedua: ";std::cin>>numberTwo;
-  return numberTwo;
+int performOperation(int numberOne, int numberTwo, char op){
+  switch(op){
+    case '+':
+      return numberOne + numberTwo;
+    case '-':
+      return numberOne - numberTwo;
+    case '*':
+      return numberOne * numberTwo;
+    default:
+      return -1;
+  }
+}
+
+void printResult(int result){
+  if(result == -1){
+    std::cout<<"Operator incorrect!";
+  }
+  else{
+    std::cout<<"Hasil: "<<result;
+  }
 }
 
 int main(int argc, char *argv[]){
-  int getAverageUser1 = getResultFromUser1();
-  int getAverageUser2 = getResultFromUser2();
-  switch(getOperatorFromUser()){
-    case '+':
-      std::cout<<getAverageUser1<<"+"<<getAverageUser2<<"= "<<getAverageUser1+getAverageUser2;
-      break;
-    case '-':
-      std::cout<<getAverageUser1<<"-"<<getAverageUser2<<"= "<<getAverageUser1-getAverageUser2;
-      break;
-    case '*':
-      std::cout<<getAverageUser1<<"*"<<getAverageUser2<<"= "<<getAverageUser1*getAverageUser2;
-      break;
-    default:
-      std::cout<<"Operator incorrect!";
-      break;
-  }
+  int numberOne = getResultFromUser("Masukan angka pertama: ");
+  int numberTwo = getResultFromUser("Masukan angka kedua: ");
+  char op = getOperatorFromUser();
+  int result = performOperation(numberOne, numberTwo, op);
+  printResult(result);
   return 0;
 }
