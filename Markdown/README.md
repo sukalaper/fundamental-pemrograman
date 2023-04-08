@@ -1,6 +1,6 @@
-# Welcome to StackEdit!
+# Selamat Datang!
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **StackEdit**. Jika Anda ingin tahu apa itu **StackEdit**, Anda dapat mengunjungi tautannya pada [link ini](https://stackedit.io/app#). Halaman ini saya dedikasikan untuk tahapan pembelajaran saya dalam menulis Markdown agar lebih rapih dan juga terstruktur, nanti akan saya lanjutkan kembali.
 
 
 # Files
@@ -141,3 +141,11 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
+
+---
+
+Reference: https://stackedit.io/app#
+
+
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
