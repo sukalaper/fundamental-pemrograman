@@ -1,68 +1,86 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
-void headerProgram(){
-  std::cout<<"Program Pendataan Mahasiswa"<<'\n';
+struct Mahasiswa{
+    std::string nama;
+    int npm;
+    std::string jurusan;
+    int penghasilan_orang_tua;
+    char bidik_misi;
+    int golongan;
+    int ukt;
+};
+
+void header_program(){
+    std::cout << "Program Pendataan Mahasiswa Sederhana"<<'\n';
 }
 
-int cekGolongan(int penghasilan){
-  int golongan = 0;
-  if(penghasilan <= 2000000){
-    golongan = 1;
-  } 
-  else if(penghasilan > 2000000 && penghasilan <= 3000000){
-    golongan = 2;
-  } 
-  else if(penghasilan > 3000000 && penghasilan <= 4000000){
-    golongan = 3;
-  } 
-  else{
-    golongan = 4;
-  }
-  return golongan;
-}
-
-const int UKT = 900000;
-const int TAHUN_MASUK = 2022;
-int jumlah,npm[13],tempPenghasilan[10],golongan[10],ukt[10];
-std::string nama[50],jurusan[50];
-char ulang,bidikMisi[1];
-
-int main(int argc, char *argv[]){
-  do{
-    headerProgram();
-    std::cout<<'\n'<<"Jumlah yang di input: ";
-    std::cin>>jumlah;
-      for(int a=0; a<jumlah; a++){
-        std::cout<<"Data ke- "<<a+1<<'\n';
-        std::cout<<"Nama: "; std::cin>>nama[a];
-        std::cout<<"NPM: "; std::cin>>npm[a];
-        std::cout<<"Jurusan: "; std::cin>>jurusan[a];
-        std::cout<<"Penghasilan orang tua: "; std::cin>>tempPenghasilan[a];
-        std::cout<<"Bidik misi [y/t]: "; std::cin>>bidikMisi[a];
-          if(bidikMisi[a] == 't' || bidikMisi[a] == 'T'){
-            golongan[a] = cekGolongan(tempPenghasilan[a]);
-            ukt[a] = UKT * golongan[a];
-          }
-          else if(bidikMisi[a] == 'y' || bidikMisi[a] == 'Y'){
-            ukt[a] = 0;
-            golongan[a] = 0;
-          }
-      }
-    int b = 0;
-    while(b<jumlah){
-      std::cout<<"\n\n"<<"HASIL"<<'\n';
-      std::cout<<"Data ke- "<<b+1<<'\n';
-      std::cout<<"----------"<<'\n';
-      std::cout<<"Tahun masuk: "<<TAHUN_MASUK<<'\n';
-      std::cout<<"Nama: "<<nama[b]<<'\n';
-      std::cout<<"NPM: "<<npm[b]<<'\n';
-      std::cout<<"Jurusan: "<<jurusan[b]<<'\n';
-      std::cout<<"Golongan: "<<golongan[b]<<'\n';
-      std::cout<<"UKT: "<<ukt[b]<<'\n';
-      std::cout<<"Penghasilan: "<<tempPenghasilan[b]<<'\n';
-       b++;
+int cek_golongan(int penghasilan){
+    int golongan = 0;
+    if(penghasilan <= 2000000){
+        golongan = 1;
+    } else if(penghasilan > 2000000 && penghasilan <= 3000000){
+        golongan = 2;
+    } else if(penghasilan > 3000000 && penghasilan <= 4000000){
+        golongan = 3;
+    } else {
+        golongan = 4;
     }
-    std::cout<<'\n'<<"Ingin mengulang [y/t]: "; std::cin>>ulang;
-  }while(ulang == 'Y' || ulang == 'y');
-  return 0;
+    return golongan;
+}
+
+Mahasiswa input_data(){
+    Mahasiswa mhs;
+    std::cout<<"Nama: ";std::cin>>mhs.nama;
+    std::cout<<"NPM: ";std::cin>>mhs.npm;
+    std::cout<<"Jurusan: ";std::cin>>mhs.jurusan;
+    std::cout<<"Penghasilan orang tua: ";std::cin>>mhs.penghasilan_orang_tua;
+    std::cout<<"Bidik misi [y/t]: ";std::cin>>mhs.bidik_misi;
+    return mhs;
+}
+
+void hitung_golongan_dan_ukt(std::vector<Mahasiswa>& daftar_mahasiswa){
+    for (Mahasiswa& mhs : daftar_mahasiswa){
+        if(mhs.bidik_misi == 't' || mhs.bidik_misi == 'T'){
+            mhs.golongan = cek_golongan(mhs.penghasilan_orang_tua);
+            mhs.ukt = 900000 * mhs.golongan;
+        } else if(mhs.bidik_misi == 'y' || mhs.bidik_misi == 'Y'){
+            mhs.ukt = 0;
+            mhs.golongan = 0;
+        }
+    }
+}
+
+void tampilkan_data(std::vector<Mahasiswa>& daftar_mahasiswa){
+    std::cout<<"\nData Mahasiswa\n";
+    std::cout<< "=============================================================================================\n";
+    std::cout<<"No. | Nama\t\t| NPM\t\t| Jurusan\t| Penghasilan Orang Tua\t| Golongan | UKT\n";
+    std::cout<< "=============================================================================================\n";
+    int no = 1;
+    for (Mahasiswa& mhs : daftar_mahasiswa) {
+        std::cout<<no++<<"\t| "<<mhs.nama<<"\t\t| "<<mhs.npm<<"\t\t| " <<mhs.jurusan<<"\t| " <<mhs.penghasilan_orang_tua<<"\t\t\t\t| "<<mhs.golongan<<"\t  | "<<mhs.ukt<< '\n';
+    }
+    std::cout<< "=============================================================================================\n";
+}
+
+int main() {
+    header_program();
+    std::vector<Mahasiswa> daftar_mahasiswa;
+
+    // Input data mahasiswa
+    int n;
+    std::cout<<"Masukkan jumlah mahasiswa yang akan diinputkan: ";std::cin>>n;
+    for(int i = 0; i < n; ++i){
+        Mahasiswa mhs = input_data();
+        daftar_mahasiswa.push_back(mhs);
+    }
+
+    // Hitung golongan dan UKT
+    hitung_golongan_dan_ukt(daftar_mahasiswa);
+
+    // Tampilkan data mahasiswa
+    tampilkan_data(daftar_mahasiswa);
+
+    return 0;
 }
