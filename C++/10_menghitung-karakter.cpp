@@ -5,7 +5,7 @@ class inputReader{
 public:
   std::string readInput(){
     std::string input;
-    std::cout << "Masukkan input Anda: ";std::getline(std::cin, input);
+    std::cout<<"Masukkan input Anda: ";std::getline(std::cin, input);
     return input;
   }
 };
