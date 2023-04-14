@@ -11,7 +11,7 @@ int hitungUmur(int tahunSekarang, int tahunLalu){
 }
 
 void displayUmur(int umur){
-  std::cout<<'\n'<<"Hallo, Usia Anda Saat Ini adalah: "<<umur<<" Tahun";
+  std::cout<<'\n'<<"Hallo, Usia Anda Saat Ini Adalah: "<<umur<<" Tahun";
 }
 
 int main(int argc, char *argv[]){
