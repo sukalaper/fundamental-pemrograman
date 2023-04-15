@@ -8,7 +8,7 @@ std::string removeCharAtOne(const std::string& str) {
 }
 
 void printString(const std::string& str) {
-  std::cout << str << '\n';
+  std::cout<<str<<'\n';
 }
 
 std::string cartoonOne() {
