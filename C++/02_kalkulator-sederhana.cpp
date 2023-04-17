@@ -28,8 +28,7 @@ int performOperation(int numberOne, int numberTwo, char op){
 void printResult(int result){
   if(result == -1){
     std::cout<<"Operator incorrect!";
-  }
-  else{
+  } else {
     std::cout<<"Hasil: "<<result;
   }
 }
