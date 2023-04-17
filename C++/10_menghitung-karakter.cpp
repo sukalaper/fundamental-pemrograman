@@ -32,6 +32,5 @@ int main(int argc, char *argv[]){
   std::string input = reader.readInput();
   int count = counter.countCharacters(input);
   printer.printResult(count);
-
   return 0;
 }
