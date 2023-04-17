@@ -23,7 +23,7 @@ public:
   }
 };
 
-int main(){
+int main(int argc, char *argv[]){
     UserInput input;
     StringManipulator manipulator;
     std::string str = input.getString();
