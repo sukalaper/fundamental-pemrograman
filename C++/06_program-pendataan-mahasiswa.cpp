@@ -13,7 +13,7 @@ struct Mahasiswa{
 };
 
 void header_program(){
-  std::cout << "Program Pendataan Mahasiswa Sederhana"<<'\n';
+  std::cout<<"Program Pendataan Mahasiswa Sederhana"<<'\n';
 }
 
 int cek_golongan(int penghasilan){
@@ -54,9 +54,9 @@ void hitung_golongan_dan_ukt(std::vector<Mahasiswa>& daftar_mahasiswa){
 
 void tampilkan_data(std::vector<Mahasiswa>& daftar_mahasiswa){
   std::cout<<"\nData Mahasiswa\n";
-  std::cout<< "=============================================================================================\n";
+  std::cout<<"=============================================================================================\n";
   std::cout<<"No. | Nama\t\t| NPM\t\t| Jurusan\t| Penghasilan Orang Tua\t| Golongan | UKT\n";
-  std::cout<< "=============================================================================================\n";
+  std::cout<<"=============================================================================================\n";
   int no = 1;
     for (Mahasiswa& mhs : daftar_mahasiswa) {
       std::cout<<no++<<"\t| "<<mhs.nama<<"\t\t| "<<mhs.npm<<"\t\t| " <<mhs.jurusan<<"\t| " <<mhs.penghasilan_orang_tua<<"\t\t\t\t| "<<mhs.golongan<<"\t  | "<<mhs.ukt<< '\n';
@@ -68,14 +68,12 @@ void tampilkan_data(std::vector<Mahasiswa>& daftar_mahasiswa){
 int main(int argc, char *argv[]){
   header_program();
   std::vector<Mahasiswa> daftar_mahasiswa;
-    
   int n;
   std::cout<<"Masukkan jumlah mahasiswa yang akan diinputkan: ";std::cin>>n;
     for(int i = 0; i < n; ++i){
       Mahasiswa mhs = input_data();
       daftar_mahasiswa.push_back(mhs);
     }
-
   hitung_golongan_dan_ukt(daftar_mahasiswa);
   tampilkan_data(daftar_mahasiswa);
 
