@@ -2,8 +2,7 @@
 
 int getInputFromUser(const std::string& message){
   int input;
-  std::cout << message;
-  std::cin >> input;
+  std::cout<<message;std::cin>>input;
   return input;
 }
 
@@ -21,7 +20,7 @@ int main(int argc, char *argv[]){
   int luas = hitungLuas(panjang, lebar);
   int keliling = hitungKeliling(panjang, lebar);
 
-  std::cout << "Luas: " << luas << '\n';
-  std::cout << "Keliling: " << keliling << '\n';
+  std::cout<<"Luas: "<<luas<<'\n';
+  std::cout<<"Keliling: "<<keliling<<'\n';
   return 0;
 }
