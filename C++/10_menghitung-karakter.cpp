@@ -17,9 +17,9 @@ public:
   }
 };
 
-class outputPrinter {
+class outputPrinter{
 public:
-  void printResult(int count) {
+  void printResult(int count){
     std::cout<<"Jumlah karakter pada input Anda adalah: "<<count<<'\n';
   }
 };
