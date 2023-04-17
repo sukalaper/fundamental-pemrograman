@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-void headerProgram() {
+void headerProgram(){
     std::cout << R"(
 ██████╗░███████╗██╗██╗░░██╗██╗██████╗░
 ██╔══██╗╚════██║██║██║░██╔╝██║██╔══██╗
@@ -15,23 +15,22 @@ void headerProgram() {
 ██████╔╝███████╗██║██║░╚██╗██║██║░░██║
 ╚═════╝░╚══════╝╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚═╝
 -------------------------------------
-)" << '\n';
+)"<<'\n';
 }
 
-std::string getInput() {
+std::string getInput(){
   std::string input;
-  std::cout << "Masukan kalimat Dzikir\t: ";
-  std::cin >> input;
+  std::cout<<"Masukan kalimat Dzikir\t: ";std::cin>> nput;
   return input;
 }
 
-int getNumForLooping() {
+int getNumForLooping(){
   std::string numForLooping;
-  std::cout << '\n' << "Ingin berapa Dzikir hari ini\t: ";std::cin >> numForLooping;
+  std::cout<<'\n'<<"Ingin berapa Dzikir hari ini\t: ";std::cin>>numForLooping;
   int finalOutput = 0;
-    for (int i = 0; i < numForLooping.length(); i++) {
-      if ((numForLooping[i] >= 'a' && numForLooping[i] <= 'z') || (numForLooping[i] >= 'A' && numForLooping[i] <= 'Z')) {
-        std::cout << "Input harus berupa Angka!" << '\n';
+    for (int i = 0; i < numForLooping.length(); i++){
+      if ((numForLooping[i] >= 'a' && numForLooping[i] <= 'z') || (numForLooping[i] >= 'A' && numForLooping[i] <= 'Z')){
+        std::cout<<"Input harus berupa Angka!"<<'\n';
         return getNumForLooping();
       }
       finalOutput = finalOutput * 10 + numForLooping[i] - '0';
@@ -39,16 +38,16 @@ int getNumForLooping() {
   return finalOutput;
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
   headerProgram();
   char u;
-    do {
+    do{
       int finalOutput = getNumForLooping();
-        for (int i = 0; i < finalOutput; i++) {
+        for (int i = 0; i < finalOutput; i++){
           std::string input = getInput();
         }
-        std::cout << "Dzikir selesai dengan total sejumlah " << finalOutput << '\n';
-        std::cout << "Apakah anda ingin mengulang kembali [Y/n]: ";std::cin >> u;
-    } while (u == 'y' || u == 'Y');
+        std::cout<<"Dzikir selesai dengan total sejumlah "<<finalOutput<<'\n';
+        std::cout<<"Apakah anda ingin mengulang kembali [Y/n]: ";std::cin>>u;
+    } while(u == 'y' || u == 'Y');
   return 0;
 }
