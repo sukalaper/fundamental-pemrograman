@@ -17,7 +17,6 @@ public:
   }
 };
 
-// Modul untuk menampilkan hasil
 class outputPrinter {
 public:
   void printResult(int count) {
@@ -25,7 +24,6 @@ public:
   }
 };
 
-// Program utama
 int main(int argc, char *argv[]){
   inputReader reader;
   characterCounter counter;
