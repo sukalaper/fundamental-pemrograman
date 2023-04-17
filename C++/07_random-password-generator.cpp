@@ -28,8 +28,8 @@ int getLengthFromUser(){
   std::string inputUser;
   int finalOutput = 0;
   std::cout<<"Masukan panjang password yang diinginkan: ";std::cin>>inputUser;
-  for(int a=0; a<inputUser.length(); a++){ // NEW FEATURE JIKA INPUT BUKAN ANGKA, MAKA PROGRAM AKAN SELALU LOOPING SAMPAI INPUT BERNILAI ANGKA.
-    if((inputUser[a]>='a' && inputUser[a]<='z') || (inputUser[a] >= 'A' && inputUser[a] <= 'Z')){
+  for (int a=0; a<inputUser.length(); a++){ // NEW FEATURE JIKA INPUT BUKAN ANGKA, MAKA PROGRAM AKAN SELALU LOOPING SAMPAI INPUT BERNILAI ANGKA.
+    if ((inputUser[a]>='a' && inputUser[a]<='z') || (inputUser[a] >= 'A' && inputUser[a] <= 'Z')){
       std::cout<<"Input harus berupa angka, bukan abjad!"<<'\n';
       return getLengthFromUser();
     }
@@ -61,5 +61,6 @@ int main(int argc, char *argv[]){
     std::string randomString = generateRandomString(length);
     std::cout<<'\n'<<randomString;
   }
+
   return 0;
 }
