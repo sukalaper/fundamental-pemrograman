@@ -34,13 +34,11 @@ int main(int argc, char *argv[]){
   Lingkaran lingkaran(0);
 
   std::cout<<"Program Menghitung Lingkaran"<<'\n';
-
   std::cout<<"Masukkan jari-jari: ";std::cin>>jari_jari;
 
   lingkaran = Lingkaran(jari_jari);
   lingkaran.hitungLuas();
   lingkaran.hitungKeliling();
   lingkaran.tampilkanHasil();
-
   return 0;
 }
