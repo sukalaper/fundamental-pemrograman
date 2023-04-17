@@ -76,6 +76,5 @@ int main(int argc, char *argv[]){
     }
   hitung_golongan_dan_ukt(daftar_mahasiswa);
   tampilkan_data(daftar_mahasiswa);
-
   return 0;
 }
