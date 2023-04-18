@@ -1,32 +1,8 @@
-## Selamat Datang!
+# Selamat Datang !
 
-Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **StackEdit**. Jika Anda ingin tahu apa itu **StackEdit**, Anda dapat mengunjungi tautannya pada [link ini](https://stackedit.io/app#). Halaman ini saya dedikasikan untuk tahapan pembelajaran saya dalam menulis Markdown agar lebih rapih dan juga terstruktur, nanti akan saya lanjutkan kembali.
+Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **StackEdit**. Jika Anda ingin tahu apa itu **StackEdit**, Anda dapat mengunjungi tautannya pada [link ini](https://stackedit.io/app#). Halaman ini saya dedikasikan untuk tahapan pembelajaran saya dalam menulis Markdown agar lebih rapih dan juga terstruktur, akan saya lanjutkan kembali secepatnya.
 
-
-## Files
-
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
-
-## Create files and folders
-
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
-
-## Switch to another file
-
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
-
-## Rename a file
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
-## Delete a file
-
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
+---
 
 # Synchronization
 
@@ -54,7 +30,7 @@ Once your file is linked to a synchronized location, StackEdit will periodically
 
 If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
 
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
+> **Note**: The **Synchronize now** button is disabled if you have no file to synchronize.
 
 ## Manage file synchronization
 
