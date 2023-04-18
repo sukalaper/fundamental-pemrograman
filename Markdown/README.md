@@ -1,9 +1,9 @@
-# Selamat Datang!
+## Selamat Datang!
 
 Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **StackEdit**. Jika Anda ingin tahu apa itu **StackEdit**, Anda dapat mengunjungi tautannya pada [link ini](https://stackedit.io/app#). Halaman ini saya dedikasikan untuk tahapan pembelajaran saya dalam menulis Markdown agar lebih rapih dan juga terstruktur, nanti akan saya lanjutkan kembali.
 
 
-# Files
+## Files
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
@@ -35,10 +35,10 @@ Synchronization is one of the biggest features of StackEdit. It enables you to s
 There are two types of synchronization and they can complement each other:
 
 - The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
+	> **Note**: To start syncing your workspace, just sign in with Google in the menu.
 
 - The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+	> **Note**: Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
 
 ## Open a file
 
