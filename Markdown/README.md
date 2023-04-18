@@ -4,7 +4,7 @@ Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **S
 
 ---
 
-# Synchronization
+## Synchronization
 
 Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
 
@@ -37,7 +37,7 @@ If you just have modified your file and you want to force syncing, click the **S
 Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
 
 
-# Publication
+## Publication
 
 Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
 
@@ -54,18 +54,18 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 
 After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
 
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
+> **Note**: The **Publish now** button is disabled if your file has not been published yet.
 
 ## Manage file publication
 
 Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
 
 
-# Markdown extensions
+## Markdown extensions
 
 StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
 
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
+> **Note**: You can disable any **Markdown extension** in the **File properties** dialog.
 
 
 ## SmartyPants
