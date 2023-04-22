@@ -1,4 +1,4 @@
-## Epilog
+## Prolog
 Repo berisi acuan tahapan pembelajaran saya, ~bahan portofolio~ dll. Semua akan terlihat sangat berantakan disini karena masih dalam tahap pembangunan kembali dari awal, harap maklum.
 
 > **Note**: Disini saya mengambil beberapa source sebagai bahan pembelajaran yang kemudian saya kembangkan ulang.
