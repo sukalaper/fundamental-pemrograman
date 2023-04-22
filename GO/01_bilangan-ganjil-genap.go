@@ -18,7 +18,7 @@ func isEven(number int) bool{
 
 func main(){
   number := getInput()
-    if isEven(number) {
+    if isEven(number){
       fmt.Println(strconv.Itoa(number) + " Ini bilangan genap.")
     } else {
       fmt.Println(strconv.Itoa(number) + " Ini bilangan ganjil.")
