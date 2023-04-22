@@ -20,7 +20,7 @@ void headerProgram(){
 
 std::string getInput(){
   std::string input;
-  std::cout<<"Masukan kalimat Dzikir\t: ";std::cin>> nput;
+  std::cout<<"Masukan kalimat Dzikir\t: ";std::cin>>input;
   return input;
 }
 
