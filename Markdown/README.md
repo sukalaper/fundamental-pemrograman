@@ -1,13 +1,6 @@
-# Selamat Datang !
+# Hallo !
 
 Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **StackEdit**. Jika Anda ingin tahu apa itu **StackEdit**, Anda dapat mengunjungi tautannya pada [link ini](https://stackedit.io/app#). Halaman ini saya dedikasikan untuk tahapan pembelajaran saya dalam menulis Markdown agar lebih rapih dan juga terstruktur, akan saya lanjutkan kembali secepatnya.
-
-## Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **Note**: You can disable any **Markdown extension** in the **File properties** dialog.
-
 
 ## SmartyPants
 
