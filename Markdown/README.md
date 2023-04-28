@@ -2,11 +2,14 @@
 
 > **Warning**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu.
 
-_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap optimal**.
+_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima dan optimal**.
 
-## SmartyPants
+_Service_ dapat dikelompokan menjadi 3 bagian, sebagai berikut.
+1. _Service_ besar, yang meliputi area depan, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan sekalian saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_.
 
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
+## Kapan Saya Harus Melakukan Service ?
+
+
 
 |                |ASCII                          |HTML                         |
 |----------------|-------------------------------|-----------------------------|
