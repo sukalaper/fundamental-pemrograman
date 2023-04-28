@@ -5,7 +5,7 @@
 _Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima dan optimal**.
 
 _Service_ dapat dikelompokan menjadi 3 bagian, sebagai berikut.
-1. _Service_ besar, yang meliputi area depan, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan sekalian saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_.
+1. _Service_ besar, yang meliputi area depan, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_.
 
 ## Kapan Saya Harus Melakukan Service ?
 
