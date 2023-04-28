@@ -1,6 +1,8 @@
-# Hallo !
+# Panduan Service Bulanan Kendaraan Matic Injeksi
 
-Hallo! ini adalah halaman saya untuk menulis Markdown yang terinspirasi dari **StackEdit**. Jika Anda ingin tahu apa itu **StackEdit**, Anda dapat mengunjungi tautannya pada [link ini](https://stackedit.io/app#). Halaman ini saya dedikasikan untuk tahapan pembelajaran saya dalam menulis Markdown agar lebih rapih dan juga terstruktur, akan saya lanjutkan kembali secepatnya.
+> **Warning**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu.
+
+_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa dari kendaraan yang telah digunakan**.
 
 ## SmartyPants
 
