@@ -1,8 +1,8 @@
-# Panduan Service Bulanan Kendaraan Matic Injeksi
+# Panduan Service Bulanan Motor Matic Injeksi
 
 > **Warning**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu.
 
-_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa dari kendaraan yang telah digunakan**.
+_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap optimal**.
 
 ## SmartyPants
 
