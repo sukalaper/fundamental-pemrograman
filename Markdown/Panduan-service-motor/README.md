@@ -1,10 +1,11 @@
 # 🛠️ Panduan Service Berkala Pada Motor Matic Injeksi
 
-![Service](SERVICE.png)
-
 > **Note**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu. 
 >
 > Catatan ini masih dalam tahap penulisan secara bertahap.
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
+![Service](SERVICE.png)
 
 <a href=" ">
 <img src="https://github.com/sukalaper/fundamental-pemrograman/blob/master/Markdown/Panduan-service-motor/SERVICE2.jpg" width="43%" align="right">
