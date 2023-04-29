@@ -35,7 +35,5 @@ Biasanya beberapa orang termasuk saya sendiri sering berpedoman pada _odometer_ 
 Kendaraan dengan jarak tempuh dalam kurun waktu **1 hari > 100 KM pada umumnya harus lebih sering diperhatikan kondisi mesin serta melakukan check pada _dipstick_ oli**. 
 > **Note**: Terutama keluarga Yamaha 125 CC karna memiliki bahan liner blok diasil yang terkenal dengan vampir oli.
 
-Jika menggunakan perkalian 
-
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
