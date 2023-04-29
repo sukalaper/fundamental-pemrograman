@@ -6,22 +6,15 @@
 
 _Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima dan optimal**.
 
-_Service_ dapat dikelompokan menjadi 3 bagian, sebagai berikut.
-1. _Service_ besar. Meliputi area depan pada mesin utama, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_.
-2. _Service_ ringan. Meliputi area pengereman, tekanan angin ban, kondisi ban, kondisi _fuelpump_, _throttle body_, filter udara, busi, kondisi bearing, serta pengecekan pada area _Continuously Variable Transmission_ atau bisa disingkat dengan CVT.
-3. _Service_ kelistrikan. Meliputi area kelistrikan seperti ECU, kiprok, ACCU, koil, sikring, saklar, perkabelan, dll.
+_Service_ dapat dikelompokan menjadi 3 bagian, untuk mempermudah perhatikan tabel sebagai berikut.
+| Jenis _Service_        | Pengerjaan |
+|------------------------|------------|
+| _Service_ Besar        | Meliputi area depan pada mesin utama, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_. |
+| _Service_ Ringan       | Meliputi area pengereman, tekanan angin ban, kondisi ban, kondisi _fuelpump_, _throttle body_, filter udara, busi, kondisi bearing, serta pengecekan pada area _Continuously Variable Transmission_ atau bisa disingkat dengan CVT. |
+| _Service_ Kelistrikan  | Meliputi area kelistrikan seperti ECU, kiprok, ACCU, koil, sikring, saklar, perkabelan, dll. |
 
 
 ## Kapan Saya Harus Melakukan Service ?
-
-
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
 
 ## KaTeX
 
