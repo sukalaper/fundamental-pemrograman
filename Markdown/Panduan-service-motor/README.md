@@ -7,7 +7,7 @@
 > Catatan ini masih dalam tahap penulisan secara bertahap.
 
 <a href=" ">
-<img src="https://github.com/sukalaper/fundamental-pemrograman/blob/master/Markdown/Panduan-service-motor/SERVICE.png" width="40%" align="right">
+<img src="https://github.com/sukalaper/fundamental-pemrograman/blob/master/Markdown/Panduan-service-motor/SERVICE2.jpg" width="43%" align="right">
 </a>
 
 _Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, mengganti, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima**.
