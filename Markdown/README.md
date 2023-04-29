@@ -1,4 +1,4 @@
-# 🛠️ Panduan Service Berkala Motor Matic Injeksi
+# 🛠️ Panduan Pada Service Berkala Pada Motor Matic Injeksi
 
 > **Note**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu. 
 >
@@ -8,7 +8,7 @@ _Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara u
 
 _Service_ dapat dikelompokan menjadi 3 bagian, sebagai berikut.
 1. _Service_ besar, yang meliputi area depan, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_.
-
+2. _Service_ ringan, yang meliputi area kelistrikan, pengereman, kondisi _fuelpump_, _throttle body_, filter udara, serta pengecekan pada area _Continuously Variable Transmission_ atau bisa disingkat dengan CVT.
 ## Kapan Saya Harus Melakukan Service ?
 
 
