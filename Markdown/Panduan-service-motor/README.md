@@ -17,8 +17,25 @@ Disini jenis _service_ saya kelompokan menjadi 3 bagian, untuk mempermudah perha
 
 
 ## Kapan Saya Harus Melakukan Service ?
-To be continued. . .
+| Waktu _Service_ Berdasarkan _odometer_ | Jenis _Service_      | Jarak Waktu |
+|:--------------------------------------:|:--------------------:|:------------|
+| 2.500 KM - 4.500 KM                    | _Service_ Ringan     | 1 / 2 Bulan |
+| 15.000 KM - 25.000 KM                  | _Service_ Besar      | 1 / 2 Tahun |
+| -                                      | _Service_ Kelistrikan| -           |
 
+> **Warning**: Pada jarak tempuh yang saya sebutkan diatas memiliki S&K dimana saya asumsikan kendaraan dalam keadaan prima. Acuannya adalah **tergantung mana yang sampai lebih dahulu, jarak KM atau jarak bulan**.
+
+Biasanya beberapa orang termasuk saya sendiri sering berpedoman pada _odometer_ sebagai acuan jarak tempuh, namun semua kembali lagi terhadap pemilik kendaraan tersebut. Disini saya akan kelompokan 3 jenis yang umum dengan tabel sebagai berikut.
+| Jarak Tempuh    | Tempo  | Contoh                             |
+|:---------------:|--------|------------------------------------|
+| > 100 KM        | 1 Hari | Ojol, Sales, Kurir, Marketing, dll.|
+| < 70 KM         | 1 Hari | Pekerja, Mahasiswa/i, dll.         |
+| < 30 KM         | 1 Hari | Antar Jemput Anak Sekolah, Kepasar |
+
+Kendaraan dengan jarak tempuh dalam kurun waktu **1 hari > 100 KM pada umumnya harus lebih sering diperhatikan kondisi mesin serta melakukan check pada _dipstick_ oli**. 
+> **Note**: Terutama keluarga Yamaha 125 CC karna memiliki bahan liner blok diasil yang terkenal dengan vampir oli.
+
+Jika menggunakan perkalian 
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
