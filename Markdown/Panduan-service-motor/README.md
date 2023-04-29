@@ -3,15 +3,14 @@
 > **Note**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu. 
 >
 > Catatan ini masih dalam tahap penulisan secara bertahap.
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
+</p>
 
 ![Service](SERVICE.png)
 
-<a href=" ">
-<img src="https://github.com/sukalaper/fundamental-pemrograman/blob/master/Markdown/Panduan-service-motor/SERVICE2.jpg" width="38%" align="right">
-</a>
-
-_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, mengganti, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima**.
+_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, mengganti, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap dalam keadaan prima**. Mengingat setiap komponen pada kendaraan memiliki batas waktu penggunaan.
 
 _Service_ dapat dikelompokan menjadi 3 bagian, untuk mempermudah perhatikan tabel sebagai berikut.
 | Jenis _Service_        | Pengerjaan |
