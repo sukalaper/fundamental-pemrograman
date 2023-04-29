@@ -4,13 +4,13 @@
 >
 > Catatan ini masih dalam tahap penulisan secara bertahap.
 
-_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima dan optimal**.
+_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, mengganti, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap prima**.
 
 _Service_ dapat dikelompokan menjadi 3 bagian, untuk mempermudah perhatikan tabel sebagai berikut.
 | Jenis _Service_        | Pengerjaan |
 |------------------------|------------|
 | _Service_ Besar        | Meliputi area depan pada mesin utama, yaitu _cylinder head_ sampai dengan area belakang, yaitu _crankshaft_. Biasanya _service_ besar ini dilakukan saat kendaraan mengalami turun mesin atau kadang dapat disebut sebagai _overhaul_. |
-| _Service_ Ringan       | Meliputi area pengereman, tekanan angin ban, kondisi ban, kondisi _shockbreaker_, kondisi _fuelpump_, _nozzle injector_, _throttle body_, filter udara, kondisi air radiator, busi, kondisi bearing, kondisi seal, serta pengecekan pada area _Continuously Variable Transmission_ atau bisa disingkat dengan CVT. |
+| _Service_ Ringan       | Meliputi area pengereman, tekanan angin ban, kondisi ban, kondisi _shockbreaker_, kondisi _fuelpump_, _nozzle injector_, _throttle body_, filter udara, kondisi air radiator, busi, kondisi bearing, kondisi oli, kondisi seal, serta pengecekan pada area _Continuously Variable Transmission_ atau bisa disingkat dengan CVT. |
 | _Service_ Kelistrikan  | Meliputi area kelistrikan seperti ECU, kiprok, ACCU, koil, sikring, saklar, perkabelan, dll. |
 
 
