@@ -16,7 +16,7 @@ Disini jenis _service_ saya kelompokan menjadi 3 bagian, untuk mempermudah perha
 | _Service_ Kelistrikan  | Meliputi area kelistrikan seperti ECU, kiprok, ACCU, koil, sikring, saklar, perkabelan, dll. |
 
 
-## Kapan Saya Harus Melakukan Service ?
+## Kapan Saya Harus Melakukan Service?
 | Waktu _Service_ Berdasarkan _odometer_ | Jenis _Service_      | Jarak Waktu |
 |:--------------------------------------:|:--------------------:|:------------|
 | 2.500 KM - 4.500 KM                    | _Service_ Ringan     | 1 / 2 Bulan |
