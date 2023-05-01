@@ -10,7 +10,7 @@ void playGame(int randomNumber){
     while(true){
       std::cout<<"Masukan tebakan Anda: ";std::cin >> playerGuess;
       guess_count++;
-        if(playerGuess > randomNumber){
+        if (playerGuess > randomNumber){
           std::cout<<"Angka terlalu tinggi, silahkan coba lagi."<<'\n';
         } else if(playerGuess < randomNumber){
           std::cout<<"Angka terlalu rendah, silahkan coba lagi."<<'\n';
