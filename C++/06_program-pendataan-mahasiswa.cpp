@@ -18,7 +18,7 @@ void header_program(){
 
 int cek_golongan(int penghasilan){
   int golongan = 0;
-  if(penghasilan <= 2000000){
+  if (penghasilan <= 2000000){
     golongan = 1;
   } else if(penghasilan > 2000000 && penghasilan <= 3000000){
     golongan = 2;
@@ -42,7 +42,7 @@ Mahasiswa input_data(){
 
 void hitung_golongan_dan_ukt(std::vector<Mahasiswa>& daftar_mahasiswa){
   for (Mahasiswa& mhs : daftar_mahasiswa){
-    if(mhs.bidik_misi == 't' || mhs.bidik_misi == 'T'){
+    if (mhs.bidik_misi == 't' || mhs.bidik_misi == 'T'){
       mhs.golongan = cek_golongan(mhs.penghasilan_orang_tua);
       mhs.ukt = 900000 * mhs.golongan;
     } else if(mhs.bidik_misi == 'y' || mhs.bidik_misi == 'Y'){
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
   std::vector<Mahasiswa> daftar_mahasiswa;
   int n;
   std::cout<<"Masukkan jumlah mahasiswa yang akan diinputkan: ";std::cin>>n;
-    for(int i = 0; i < n; ++i){
+    for (int i = 0; i < n; ++i){
       Mahasiswa mhs = input_data();
       daftar_mahasiswa.push_back(mhs);
     }
