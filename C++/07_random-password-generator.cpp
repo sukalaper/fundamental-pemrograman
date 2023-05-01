@@ -23,7 +23,7 @@ int getLengthFromUser(){
   std::string inputUser;
   int finalOutput = 0;
   std::cout<<"Masukan panjang password yang diinginkan: ";std::cin>>inputUser;
-  for (int a=0; a<inputUser.length(); a++){ // NEW FEATURE JIKA INPUT BUKAN ANGKA, MAKA PROGRAM AKAN SELALU LOOPING SAMPAI INPUT BERNILAI ANGKA.
+  for (int a=0; a<inputUser.length(); a++){ # NEW FEATURE JIKA INPUT BUKAN ANGKA, MAKA PROGRAM AKAN SELALU LOOPING SAMPAI INPUT BERNILAI ANGKA.
     if ((inputUser[a]>='a' && inputUser[a]<='z') || (inputUser[a] >= 'A' && inputUser[a] <= 'Z')){
       std::cout<<"Input harus berupa angka, bukan abjad!"<<'\n';
       return getLengthFromUser();
@@ -33,7 +33,7 @@ int getLengthFromUser(){
   return finalOutput;
 }
 
-int getNumStringFromUser(){ //NEW FEATURE OUTPUT DISESUAIKAN DARI PENGGUNA
+int getNumStringFromUser(){ # NEW FEATURE OUTPUT DISESUAIKAN DARI PENGGUNA
   int numStrings;
   std::cout<<"Masukan banyaknya output password yang diinginkan: ";std::cin>>numStrings;
   return numStrings;
