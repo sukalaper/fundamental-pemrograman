@@ -6,7 +6,7 @@
 
 ![Service](SERVICE.png)
 
-_Service_? apa itu _service_? dalam dunia otomotif **service adalah suatu cara untuk memperbaiki, mengganti, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap dalam keadaan prima**. Mengingat setiap komponen pada kendaraan memiliki batas waktu penggunaannya tersendiri.
+_Service_? apa itu _service_? dalam dunia otomotif _service_ adalah **suatu cara untuk memperbaiki, mengganti, membersihkan dan mengoptimalkan kembali performa kendaraan yang telah digunakan agar kondisi mesin tetap dalam keadaan prima**, mengingat setiap komponen pada kendaraan memiliki batas waktu penggunaannya tersendiri.
 
 Disini jenis _service_ saya kelompokan menjadi 3 bagian, untuk mempermudah perhatikan tabel sebagai berikut.
 | Jenis _Service_        | Pengerjaan |
@@ -25,7 +25,9 @@ Disini jenis _service_ saya kelompokan menjadi 3 bagian, untuk mempermudah perha
 
 > **Warning**: Pada jarak tempuh yang saya sebutkan diatas memiliki S&K dimana saya asumsikan kendaraan dalam keadaan prima. Acuannya adalah **tergantung mana yang sampai lebih dahulu, jarak KM atau jarak bulan**.
 
-Biasanya beberapa orang termasuk saya sendiri sering berpedoman pada _odometer_ sebagai acuan jarak tempuh, namun semua kembali lagi terhadap pemilik kendaraan tersebut. Disini saya akan kelompokan 3 jenis yang umum dengan tabel sebagai berikut.
+Biasanya beberapa orang termasuk saya sendiri sering berpedoman pada _odometer_ sebagai acuan jarak tempuh, namun semua kembali lagi terhadap pemilik kendaraan tersebut.
+
+Disini saya akan kelompokan 3 jenis yang umum dengan tabel sebagai berikut.
 | Jarak Tempuh    | Tempo  | Contoh                             |
 |:---------------:|--------|------------------------------------|
 | > 100 KM        | 1 Hari | Ojol, Sales, Kurir, Marketing, dll.|
