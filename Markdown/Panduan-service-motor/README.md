@@ -1,8 +1,8 @@
 # 🛠️ Panduan Service Berkala Pada Motor Matic Injeksi
 
-> **Note**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu. 
+> **Note**: Saya sama sekali tidak berafiliasi pada produk tertentu, ini hanya rangkuman menurut teori dan praktek yang telah saya pelajari selama beberapa waktu.
 >
-> Catatan ini masih dalam tahap penulisan secara bertahap.
+> Catatan ini masih dalam tahap penulisan secara bertahap, kontribusi sangat diperkenankan pada dokumentasi ini.
 
 ![Service](SERVICE.png)
 
