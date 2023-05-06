@@ -35,7 +35,7 @@ Disini saya akan kelompokan 3 jenis yang umum dengan tabel sebagai berikut.
 | < 30 KM         | 1 Hari | Antar Jemput Anak Sekolah, Kepasar |
 
 Kendaraan dengan jarak tempuh dalam kurun waktu **1 hari > 100 KM pada umumnya harus lebih sering diperhatikan kondisi mesin serta melakukan check pada _dipstick_ oli**. 
-> **Note**: Terutama keluarga Yamaha 125 CC karna memiliki bahan liner blok diasil yang terkenal dengan julukan vampir oli.
+> **Note**: Terutama keluarga Yamaha 125 CC karna memiliki bahan _cylinder_ dari diasil yang terkenal dengan julukan vampir oli.
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
