@@ -1,4 +1,4 @@
-# Restoran XYZ
+# Restoran Sukalaper
 ![FireShot Capture 007 - Selamat Datang - ](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/3d60b70d-2158-43b2-8451-0f666d57bcba)
 
 Ini adalah halaman landing sederhana untuk restoran fiktif yang dibangun menggunakan HTML dan CSS dengan bantuan Framework Tailwind CSS.
