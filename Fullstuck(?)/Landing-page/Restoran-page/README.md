@@ -1,15 +1,14 @@
 # Restoran XYZ
+![FireShot Capture 007 - Selamat Datang - ](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/3d60b70d-2158-43b2-8451-0f666d57bcba)
 
-![Screenshot_2023-05-22-01-53-03_1920x1080](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/f7fb0587-505d-4cc8-afae-2a1b773038f9)
-
-Ini adalah halaman landing sederhana untuk restoran fiktif yang dibangun menggunakan HTML dan CSS dengan bantuan Tailwind CSS.
+Ini adalah halaman landing sederhana untuk restoran fiktif yang dibangun menggunakan HTML dan CSS dengan bantuan Framework Tailwind CSS.
 
 ## Fitur
 
 - **Navbar**: Terdapat navbar dengan menu navigasi yang memudahkan pengguna untuk menjelajahi halaman restoran.
 - **Menu Selection**: Tampilkan pilihan menu restoran dengan gambar, judul, dan deskripsi.
 - **Menu Special Selection**: Tampilkan menu spesial restoran dengan gambar, judul, dan deskripsi.
-- **Contact Selection**: Tampilkan informasi kontak restoran seperti nomor telepon, email, dan alamat beserta jam operasional.
+- **Contact**: Tampilkan informasi kontak restoran seperti nomor telepon, email, dan alamat beserta jam operasional.
 
 ## Cara Menjalankan
 
