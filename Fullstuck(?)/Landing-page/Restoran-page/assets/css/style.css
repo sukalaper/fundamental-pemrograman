@@ -1,0 +1,20 @@
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-enter {
+  animation: slide 0.8s ease-in-out;
+}
+
+.image {
+    width: 300px;
+      height: 300px;
+        object-fit: cover; /* Opsional: Untuk menjaga proporsi gambar jika aspek rasio berbeda */
+}
