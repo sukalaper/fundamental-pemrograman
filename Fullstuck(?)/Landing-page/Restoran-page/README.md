@@ -15,7 +15,7 @@ Ini adalah halaman landing sederhana untuk restoran fiktif yang dibangun menggun
 1. Clone repositori ini ke dalam direktori lokal Anda.
 2. Buka file `index.html` menggunakan browser web favorit Anda.
 
-## Customisasi
+## Kustomisasi
 
 Jika Anda ingin mengubah konten, tampilan, atau gaya restoran, Anda dapat melakukan hal-hal berikut:
 
