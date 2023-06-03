@@ -14,7 +14,7 @@
 }
 
 .image {
-    width: 300px;
-      height: 300px;
-        object-fit: cover; /* Opsional: Untuk menjaga proporsi gambar jika aspek rasio berbeda */
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Opsional: Untuk menjaga proporsi gambar jika aspek rasio berbeda */
 }
