@@ -7,8 +7,8 @@ def detect_color(image):
     # Tentukan 2 rentang warna berbeda
     # Untuk warna dapat ditentukan pada website dibawah ini :
     # https://www.color-blindness.com/color-name-hue/
-    lower_color = np.array([0, 0, 50])  # Rentang bawah warna (misal: biru)
-    upper_color = np.array([10, 225, 225])  # Rentang atas warna (misal: biru)
+    lower_blue = np.array([0, 0, 50])  # Rentang bawah warna (misal: biru)
+    lower_blue = np.array([10, 225, 225])  # Rentang atas warna (misal: biru)
     lower_red = np.array([0, 50, 50])  # Rentang bawah warna merah
     upper_red = np.array([10, 255, 255])  # Rentang atas warna merah
     
