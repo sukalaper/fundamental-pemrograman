@@ -4,18 +4,24 @@ import numpy as np
 def detect_color(image):
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    # Tentukan rentang warna
+    # Tentukan 2 rentang warna berbeda
     # Untuk warna dapat ditentukan pada website dibawah ini :
     # https://www.color-blindness.com/color-name-hue/
-    lower_color = np.array([0, 0, 50])  # Rentang bawah warna (misal: Hijau)
-    upper_color = np.array([10, 225, 225])  # Rentang atas warna (misal: Hijau)
-
+    lower_color = np.array([0, 0, 50])  # Rentang bawah warna (misal: biru)
+    upper_color = np.array([10, 225, 225])  # Rentang atas warna (misal: biru)
+    lower_red = np.array([0, 50, 50])  # Rentang bawah warna merah
+    upper_red = np.array([10, 255, 255])  # Rentang atas warna merah
+    
     # Buat mask dengan rentang warna yang ditentukan
-    mask = cv2.inRange(hsv_image, lower_color, upper_color)
+    mask_blue = cv2.inRange(hsv_image, lower_blue, upper_blue)
+    mask_red = cv2.inRange(hsv_image, lower_red, upper_red)
+
+    # Gabungkan kedua mask menjadi satu
+    mask = cv2.bitwise_or(mask_blue, mask_red)
 
     # Aplikasikan mask pada citra asli
     result = cv2.bitwise_and(image, image, mask=mask)
-
+    
     return result
 
 # Buka kamera
