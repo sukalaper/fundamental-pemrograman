@@ -51,7 +51,7 @@ while True:
     total_area_pixel = mask.shape[0] * mask.shape[1]
     persentase_area = (total_area / total_area_pixel) * 100
 
-    data['Citra Hasil'].append(result)
+    data['Citra Hasil'].append(result.copy())
     data['Toleransi (H, S, V)'].append([hue_value, 10, 10])
     data['Jumlah Objek Terdeteksi'].append(jumlah_objek)
     data['Total Area Terdeteksi (Pixel)'].append(total_area)
