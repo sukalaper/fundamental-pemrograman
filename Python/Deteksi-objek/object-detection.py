@@ -38,16 +38,16 @@ while True:
 
     hsv_image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # Tentukan rentang warna berdasarkan nilai HUE dari slider
-    lower_color = np.array([hue_value-10, 50, 50])  # Rentang bawah warna
-    upper_color = np.array([hue_value+10, 255, 255])  # Rentang atas warna
+
+    lower_color = np.array([hue_value-10, 50, 50])  
+    upper_color = np.array([hue_value+10, 255, 255]) 
 
     mask = cv2.inRange(hsv_image, lower_color, upper_color)
 
     result = cv2.bitwise_and(frame, frame, mask=mask)
 
     result_hex = result.copy()
-    result_hex[np.where(mask != 0)] = [0, 0, 255]  # Ubah warna piksel yang terdeteksi menjadi biru
+    result_hex[np.where(mask != 0)] = [0, 0, 255]  
 
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     jumlah_objek = len(contours)
