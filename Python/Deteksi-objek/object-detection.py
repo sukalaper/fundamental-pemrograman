@@ -1,60 +1,71 @@
 import cv2
 import numpy as np
+import pandas as pd
 
-# Fungsi callback untuk mengubah nilai HUE saat slider digeser
 def on_hue_change(value):
     global hue_value
     hue_value = value
 
-# Inisialisasi nilai HUE awal
 hue_value = 0
 
-# Buka kamera
 cap = cv2.VideoCapture(0)
 
-# Periksa apakah kamera terbuka dengan sukses
 if not cap.isOpened():
     print("Tidak dapat membuka kamera")
     exit()
 
-# Set ukuran frame kamera
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 430)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 350)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 650)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 534)
 
-# Buat jendela tampilan dengan slider HUE
 cv2.namedWindow('Hasil Deteksi Objek')
 cv2.createTrackbar('HUE', 'Hasil Deteksi Objek', hue_value, 180, on_hue_change)
 
+data = {
+    'Citra Hasil': [],
+    'Toleransi (H, S, V)': [],
+    'Jumlah Objek Terdeteksi': [],
+    'Total Area Terdeteksi (Pixel)': [],
+    'Persentasi Area Terdeteksi (%)': []
+}
+
 while True:
-    # Baca citra dari kamera
     ret, frame = cap.read()
 
-    # Periksa apakah citra berhasil dibaca
     if not ret:
         print("Tidak dapat membaca frame dari kamera")
         break
 
-    # Konversi citra menjadi HSV
     hsv_image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # Tentukan rentang warna berdasarkan nilai HUE dari slider
     lower_color = np.array([hue_value-10, 50, 50])  # Rentang bawah warna
     upper_color = np.array([hue_value+10, 255, 255])  # Rentang atas warna
 
-    # Buat mask dengan rentang warna yang ditentukan
     mask = cv2.inRange(hsv_image, lower_color, upper_color)
 
-    # Aplikasikan mask pada citra asli
     result = cv2.bitwise_and(frame, frame, mask=mask)
 
-    # Tampilkan citra asli dan hasil deteksi
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    jumlah_objek = len(contours)
+    total_area = sum([cv2.contourArea(cnt) for cnt in contours])
+
+    total_area_pixel = mask.shape[0] * mask.shape[1]
+    persentase_area = (total_area / total_area_pixel) * 100
+
+    data['Citra Hasil'].append(result)
+    data['Toleransi (H, S, V)'].append([hue_value, 10, 10])
+    data['Jumlah Objek Terdeteksi'].append(jumlah_objek)
+    data['Total Area Terdeteksi (Pixel)'].append(total_area)
+    data['Persentase Area Terdeteksi (%)'].append(persentase_area)
+
     cv2.imshow('Gambar Asli', frame)
     cv2.imshow('Hasil Deteksi Objek', result)
 
-    # Keluar dari loop jika tombol 'q' ditekan
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Tutup kamera dan jendela tampilan
 cap.release()
 cv2.destroyAllWindows()
+
+df = pd.DataFrame(data)
+
+print(df)
