@@ -55,7 +55,7 @@ while True:
     data['Toleransi (H, S, V)'].append([hue_value, 10, 10])
     data['Jumlah Objek Terdeteksi'].append(jumlah_objek)
     data['Total Area Terdeteksi (Pixel)'].append(total_area)
-    data['Persentase Area Terdeteksi (%)'].append(persentase_area)
+    data['Persentasi Area Terdeteksi (%)'].append(persentase_area)
 
     cv2.imshow('Gambar Asli', frame)
     cv2.imshow('Hasil Deteksi Objek', result)
