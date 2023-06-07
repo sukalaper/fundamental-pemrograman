@@ -1,28 +1,13 @@
 import cv2
 import numpy as np
 
-def detect_color(image):
-    hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+# Fungsi callback untuk mengubah nilai HUE saat slider digeser
+def on_hue_change(value):
+    global hue_value
+    hue_value = value
 
-    # Tentukan 2 rentang warna berbeda
-    # Untuk warna dapat ditentukan pada website dibawah ini :
-    # https://www.color-blindness.com/color-name-hue/
-    lower_blue = np.array([0, 0, 50])  # Rentang bawah warna (misal: biru)
-    lower_blue = np.array([10, 225, 225])  # Rentang atas warna (misal: biru)
-    lower_red = np.array([0, 50, 50])  # Rentang bawah warna merah
-    upper_red = np.array([10, 255, 255])  # Rentang atas warna merah
-    
-    # Buat mask dengan rentang warna yang ditentukan
-    mask_blue = cv2.inRange(hsv_image, lower_blue, upper_blue)
-    mask_red = cv2.inRange(hsv_image, lower_red, upper_red)
-
-    # Gabungkan kedua mask menjadi satu
-    mask = cv2.bitwise_or(mask_blue, mask_red)
-
-    # Aplikasikan mask pada citra asli
-    result = cv2.bitwise_and(image, image, mask=mask)
-    
-    return result
+# Inisialisasi nilai HUE awal
+hue_value = 0
 
 # Buka kamera
 cap = cv2.VideoCapture(0)
@@ -33,8 +18,12 @@ if not cap.isOpened():
     exit()
 
 # Set ukuran frame kamera
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 430)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 350)
+
+# Buat jendela tampilan dengan slider HUE
+cv2.namedWindow('Hasil Deteksi Objek')
+cv2.createTrackbar('HUE', 'Hasil Deteksi Objek', hue_value, 180, on_hue_change)
 
 while True:
     # Baca citra dari kamera
@@ -45,8 +34,18 @@ while True:
         print("Tidak dapat membaca frame dari kamera")
         break
 
-    # Panggil fungsi deteksi warna
-    result = detect_color(frame)
+    # Konversi citra menjadi HSV
+    hsv_image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    # Tentukan rentang warna berdasarkan nilai HUE dari slider
+    lower_color = np.array([hue_value-10, 50, 50])  # Rentang bawah warna
+    upper_color = np.array([hue_value+10, 255, 255])  # Rentang atas warna
+
+    # Buat mask dengan rentang warna yang ditentukan
+    mask = cv2.inRange(hsv_image, lower_color, upper_color)
+
+    # Aplikasikan mask pada citra asli
+    result = cv2.bitwise_and(frame, frame, mask=mask)
 
     # Tampilkan citra asli dan hasil deteksi
     cv2.imshow('Gambar Asli', frame)
