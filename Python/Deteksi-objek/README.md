@@ -7,16 +7,7 @@
 Pada bagian ini, kita mengimpor library yang dibutuhkan untuk menjalankan deteksi objek dengan kamera dan pengaturan toleransi warna.
 ```
 import cv2
+import openpyxl
 import numpy as np
 import pandas as pd
 ```
-
-2. Fungsi Callback Untuk Slider HUE
-
-Fungsi `on_hue_change()` digunakan sebagai callback untuk mengubah nilai HUE saat slider digeser.
-```
-def on_hue_change(value):
-    global hue_value
-    hue_value = value
-```
-
