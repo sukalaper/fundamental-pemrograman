@@ -1,0 +1,119 @@
+body {
+  background-color: #F9FBE7;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px;
+}
+
+.navbar {
+  background-color: #FEA1A1;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+  width: 15%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px; 
+  transition: box-shadow 0.2s ease; 
+}
+
+.navbar:hover {
+  box-shadow: 6px 8px 1px rgba(0, 0, 0, 0.3); 
+}
+
+.navbar h1 {
+  color: #F9FBE7;
+  font-size: 22px;
+}
+
+.form-input {
+  background-color: #F9FBE7;
+  border-radius: 10px;
+  padding: 12px;
+  border: 3px solid #ECCDB4;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-input::placeholder {
+  color: #18122B; 
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #FEA1A1; 
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-row .form-input {
+  width: calc(40.90% - 10px);
+  margin-right: 12px;
+  margin-bottom: 10px; 
+}
+
+.form-row .form-input:last-child {
+  margin-right: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  color: #FEA1A1;
+}
+
+form {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.button-1, 
+.button-2 {
+  display: block;
+  width: 90%;
+  padding: 13px;
+  background-color: #FEA1A1;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-2 {
+  background-color: #ECCDB4;
+}
+
+#hasilCV {
+  margin-top: auto;
+  border: 1px solid #ccc;
+  padding: 50px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #FEA1A1;
+  padding: 10px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
