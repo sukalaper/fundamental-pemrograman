@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Pembuat CV ATS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha256-g5zo4y6ZT0+0r1Jhg7j0G6Z+R8cCV0bMlOfmpT09NFM=" crossorigin="anonymous"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <h1>CV ATS SEDERHANA</h1>
+  </div>
+  <form id="cvForm">
+    <h4> Data Anda </h4>
+    <div class="form-row">
+      <input type="text" class="form-input" id="nama" placeholder="Nama.." required>
+      <input type="text" class="form-input" id="posisi" placeholder="Posisi pekerjaan.." required>
+      <input type="email" class="form-input" id="email" placeholder="Email.." required>
+      <input type"text" class="form-input" id="social" placeholder="Website anda, jika ada..">
+      <input type="telp" class="form-input" id="telp" placeholder="Telp.." required>
+      <textarea id="alamat" class="form-input" placeholder="Alamat.." required></textarea>
+    </div>
+    <h4> Tentang Anda </h4>
+    <div class="form-row">
+      <textarea id="ringkasan" class="form-input" placeholder="Tuliskan deskripsi diri Anda di sini, termasuk format HTML yang didukung.." required></textarea>
+    </div>
+    <h4>Pendidikan Terakhir Anda</h4>
+    <div class="form-row">
+      <input type="text" class="form-input" id="pendidikan" placeholder="Nama sekolah.." required>
+      <input type="text" id="tahun" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
+      <textarea class="form-input" id="keterangan_pendidikan" placeholder="Keterangan.." required></textarea>
+    </div>
+    <div class="form-row">
+      <input type="text" class="form-input" id="pendidikan_2" placeholder="Nama sekolah.." required>
+      <input type="text" id="tahun_2" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
+      <textarea class="form-input" id="keterangan_pendidikan_2" placeholder="Keterangan.." required></textarea>
+    </div>
+    <button class="button-2" type="submit">Buat CV Anda !</button>
+  </form>
+  <div id="hasilCV"></div>
+  <script src="script.js"></script>
+</body>
+<div class="footer">
+  <p>&copy; 2023 Sukalaper. All rights reserved.</p>
+</div>
+</html>
