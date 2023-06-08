@@ -1,3 +1,4 @@
+"""
 import cv2
 import openpyxl
 import numpy as np
@@ -78,3 +79,4 @@ df['Citra Hasil'] = df['Citra Hasil'].apply(lambda x: ['{:02X}'.format(pixel[2])
 print(df)
 
 df.to_excel('hasil_deteksi.xlsx', index=False)
+"""
