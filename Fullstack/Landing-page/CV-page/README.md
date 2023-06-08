@@ -1,4 +1,4 @@
-# Sebuah Website Pembuatan CV ATS Sederhana
+# Website Pembuatan CV ATS Sederhana
 
 > **Warning**: Karena masih dalam tahap pengembangan secara iseng-iseng, semua kode didalamnya masih sangat amat berantakan. Saya akan melanjutkannya sesuai m00d.
 
