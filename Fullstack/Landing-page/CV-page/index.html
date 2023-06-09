@@ -28,7 +28,7 @@
     <div class="form-row">
       <textarea id="ringkasan" class="form-input" placeholder="Tuliskan deskripsi diri Anda di sini, termasuk format HTML yang didukung.." required></textarea>
     </div>
-    <h4>Pendidikan Terakhir Anda</h4>
+    <h4> Pendidikan Terakhir Anda </h4>
     <div class="form-row">
       <input type="text" class="form-input" id="pendidikan" placeholder="Nama sekolah.." required>
       <input type="text" id="tahun" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
@@ -38,6 +38,15 @@
       <input type="text" class="form-input" id="pendidikan_2" placeholder="Nama sekolah.." required>
       <input type="text" id="tahun_2" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
       <textarea class="form-input" id="keterangan_pendidikan_2" placeholder="Keterangan.." required></textarea>
+    </div>
+    <h4> Pengalaman </h4>
+    <div class="form-row">
+      <input type="text" class="form-input" id="tempat_kerja" placeholder="Tempat anda bekerja sebelumnya.." required>
+      <input type="text" class="form-input" id="tahun_kerja" placeholder="Tahun anda bekerja.." required>
+      <input type="text" class="form-input" id="posisi_kerja" placeholder="Posisi anda.." required>
+      <textarea class="form-input" id="tugas_kerja" placeholder="Deskripsikan pekerjaan anda secara singkat.." required></textarea>
+      <button class="button-1" id="tambahPengalamanButton">Tambah Pengalaman</button>
+      <div id="pengalamanContainer"></div>
     </div>
     <button class="button-2" type="submit">Buat CV Anda !</button>
   </form>
