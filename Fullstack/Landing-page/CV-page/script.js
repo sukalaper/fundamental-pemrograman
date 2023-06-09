@@ -1,11 +1,10 @@
-// Menambah tombol pada pengalaman
 document.getElementById('tambahPengalamanButton').addEventListener('click', function() {
   tambahPengalaman();
 });
 var pengalamanCounter = 0;
 function tambahPengalaman() {
   if (pengalamanCounter >= 2) {
-    return; // Jika sudah mencapai batas maksimal pengalaman
+    return; 
   }
   var pengalamanContainer = document.getElementById('pengalamanContainer');
     var pengalamanHTML = `
@@ -19,7 +18,6 @@ function tambahPengalaman() {
     `;
     pengalamanContainer.insertAdjacentHTML('beforeend', pengalamanHTML);
     pengalamanCounter++;
-    // Tambahkan event listener untuk tombol "Hapus" pada pengalaman baru
     var hapusPengalamanButtons = document.getElementsByClassName('hapusPengalamanButton');
     for (var i = 0; i < hapusPengalamanButtons.length; i++) {
       hapusPengalamanButtons[i].addEventListener('click', function() {
@@ -32,7 +30,6 @@ function tambahPengalaman() {
     pengalamanContainer.removeChild(pengalaman);
     pengalamanCounter--;
   }
-// Ambil nilai-nilai dari input dan elemen form lainnya
 document.getElementById('cvForm').addEventListener('submit', function() {
   var nama = document.getElementById('nama').value;
   var posisi = document.getElementById('posisi').value;
@@ -51,7 +48,6 @@ document.getElementById('cvForm').addEventListener('submit', function() {
   var tahunKerja = document.getElementById('tahun_kerja').value;
   var posisiKerja = document.getElementById('posisi_kerja').value;
   var tugasKerja = document.getElementById('tugas_kerja').value;
-  // Proses data dan buat CV
   var cvData = {
     nama: nama,
     posisi: posisi,
@@ -72,11 +68,9 @@ document.getElementById('cvForm').addEventListener('submit', function() {
     tugas_kerja: tugasKerja,
   };
   var cvHTML = generateCV(cvData);
-  // Tampilkan hasil 
   document.getElementById('hasilCV').innerHTML = cvHTML;
 });
 function generateCV(data) {
-// Buat CV dalam format HTML menggunakan data yang diberikan
   var cvHTML = `
     <div style="line-height: 10px;">
       <h2 style="color: #213555; text-transform: uppercase;">${data.nama}</h2>
