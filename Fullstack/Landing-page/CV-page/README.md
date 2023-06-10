@@ -9,3 +9,5 @@
 ![Result-preview](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/f3153a34-b9b0-49fa-aac6-707a98230f58)
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
+I have no idea..
