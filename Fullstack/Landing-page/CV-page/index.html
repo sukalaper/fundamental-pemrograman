@@ -15,39 +15,27 @@
     <h1>CV ATS SEDERHANA</h1>
   </div>
   <form id="cvForm">
-    <h4> Data Anda </h4>
-    <div class="form-row">
-      <input type="text" class="form-input" id="nama" placeholder="Nama.." required>
-      <input type="text" class="form-input" id="posisi" placeholder="Posisi pekerjaan.." required>
-      <input type="email" class="form-input" id="email" placeholder="Email.." required>
-      <input type"text" class="form-input" id="social" placeholder="Website anda, jika ada..">
-      <input type="telp" class="form-input" id="telp" placeholder="Telp.." required>
-      <textarea id="alamat" class="form-input" placeholder="Alamat.." required></textarea>
-    </div>
-    <h4> Tentang Anda </h4>
-    <div class="form-row">
-      <textarea id="ringkasan" class="form-input" placeholder="Tuliskan deskripsi diri Anda di sini, termasuk format HTML yang didukung.." required></textarea>
-    </div>
-    <h4> Pendidikan Terakhir Anda </h4>
-    <div class="form-row">
-      <input type="text" class="form-input" id="pendidikan" placeholder="Nama sekolah.." required>
-      <input type="text" id="tahun" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
-      <textarea class="form-input" id="keterangan_pendidikan" placeholder="Keterangan.." required></textarea>
-    </div>
-    <div class="form-row">
-      <input type="text" class="form-input" id="pendidikan_2" placeholder="Nama sekolah.." required>
-      <input type="text" id="tahun_2" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
-      <textarea class="form-input" id="keterangan_pendidikan_2" placeholder="Keterangan.." required></textarea>
-    </div>
-    <h4> Pengalaman </h4>
-    <div class="form-row">
-      <input type="text" class="form-input" id="tempat_kerja" placeholder="Tempat anda bekerja sebelumnya.." required>
-      <input type="text" class="form-input" id="tahun_kerja" placeholder="Tahun anda bekerja.." required>
-      <input type="text" class="form-input" id="posisi_kerja" placeholder="Posisi anda.." required>
-      <textarea class="form-input" id="tugas_kerja" placeholder="Deskripsikan pekerjaan anda secara singkat.." required></textarea>
-      <button class="button-1" id="tambahPengalamanButton">Tambah Pengalaman</button>
-      <div id="pengalamanContainer"></div>
-    </div>
+    <h3> Data Anda </h3>
+    <input type="text" class="form-input" id="nama" placeholder="Nama.." required>
+    <input type="text" class="form-input" id="posisi" placeholder="Posisi pekerjaan.." required>
+    <input type="email" class="form-input" id="email" placeholder="Email.." required>
+    <input type"text" class="form-input" id="social" placeholder="Website anda, jika ada..">
+    <input type="telp" class="form-input" id="telp" placeholder="Telp.." required>
+    <textarea id="alamat" class="form-input" placeholder="Alamat.." required></textarea>
+    <h3> Tentang Anda </h3>
+    <textarea id="ringkasan" class="form-input" placeholder="Tuliskan deskripsi diri Anda di sini, termasuk format HTML yang didukung.." required></textarea>
+    <h3> Pendidikan Anda </h3>
+    <input type="text" class="form-input" id="pendidikan" placeholder="Nama sekolah.." required>
+    <input type="text" id="tahun" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
+    <textarea class="form-input" id="keterangan_pendidikan" placeholder="Keterangan.." required></textarea>
+    <h4> Pendidikan Kedua </h4>
+    <input type="text" class="form-input" id="pendidikan_2" placeholder="Nama sekolah.." required>
+    <input type="text" id="tahun_2" pattern="\d{4} - \d{4}" class="form-input" placeholder="Tahun.." required>
+    <textarea class="form-input" id="keterangan_pendidikan_2" placeholder="Keterangan.." required></textarea>
+    <h3> Pengalaman </h3>
+    <input type="text" class="form-input" id="tempat_kerja" placeholder="Tempat Anda Bekerja Sebelumnya.." required>
+    <input type="text" class="form-input" id="posisi_kerja" placeholder="Posisi Anda.." required>
+    <input type="text" class="form-input" id="tahun_kerja" placeholder="Tahun Anda Bekerja.." required>
     <button class="button-2" type="submit">Buat CV Anda !</button>
   </form>
   <div id="hasilCV"></div>
