@@ -4,7 +4,7 @@ import openpyxl
 import numpy as np
 import pandas as pd
 
-def on_hue_change(value):
+def on_hue_change(value);
     global hue_value
     hue_value = value
 
