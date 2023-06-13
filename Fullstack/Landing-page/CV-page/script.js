@@ -1,5 +1,6 @@
 document.getElementById('cvForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Mencegah formulir dikirimkan secara default
+
   var nama = document.getElementById('nama').value;
   var posisi = document.getElementById('posisi').value;
   var email = document.getElementById('email').value;
@@ -39,36 +40,36 @@ document.getElementById('cvForm').addEventListener('submit', function(event) {
   var cvHTML = generateCV(cvData);
   document.getElementById('hasilCV').innerHTML = cvHTML;
 });
+
 function generateCV(data) {
   var cvHTML = `
-    <div style="line-height: 10px;">
-      <h2 style="color: #213555; text-transform: uppercase;">${data.nama}</h2>
-      <h3 style="color: #213555;">${data.posisi}</h3>
-      <div style="margin-top: 10px;">
-        <i class="fas fa-home"></i> ${data.alamat} <i class="fab fa-whatsapp" style="padding-left: 3px;"></i> ${data.telp} <i class="fa fa-envelope" style="padding-left: 3px;"></i> ${data.email} ${data.social ? `<i class="fas fa-link" style="padding-left: 3px;"></i> ${data.social}` : ''}
-      </div>
+  <div class="cv-container">
+      <h2>${data.nama}</h2>
+      <h3>${data.posisi}</h3>
+      <div class="contact-details">
+      <i class="fas fa-home"></i> ${data.alamat}
+      <i class="fab fa-whatsapp"></i> ${data.telp}
+      <i class="fa fa-envelope"></i> ${data.email}
+      ${data.social ? `<i class="fas fa-link"></i> ${data.social}` : ''}
     </div>
-    <h3 style="margin-top: 35px; padding: 6px; letter-spacing: 3px; color: #FBFBFB; background-color: #213555;">RINGKASAN</h3>
-    <div>${data.ringkasan}</div>
-    <h3 style="margin-top: 35px; padding: 6px; letter-spacing: 3px; color: #FBFBFB; background-color: #213555;">PENDIDIKAN</h3>
-    <div style="text-transform: uppercase; font-weight: bold;">
-      ${data.pendidikan} | ${data.tahun}
-    </div>
+  </div>
+  <h3 class="section-title">RINGKASAN</h3>
+  <div>${data.ringkasan}</div>
+  <h3 class="section-title">PENDIDIKAN</h3>
+  <div class="education-info">
+    <div>${data.pendidikan} | ${data.tahun}</div>
     <div>${data.keterangan_pendidikan}</div>
-    <div style="text-transform: uppercase; font-weight: bold; margin-top: 10px;">
-      ${data.pendidikan_2} | ${data.tahun_2}
-    </div>
+  </div>
+  <div class="education-info">
+    <div>${data.pendidikan_2} | ${data.tahun_2}</div>
     <div>${data.keterangan_pendidikan_2}</div>
-    <h3 style="margin-top: 35px; padding: 6px; letter-spacing: 3px; color: #FBFBFB; background-color: #213555;">PENGALAMAN</h3>
-    <div style="text-transform: uppercase; font-weight: bold;">
-      ${data.tempat_kerja}
-    </div>
-    <div style="text-transform: uppercase; font-weight: bold;">
-      ${data.posisi_kerja} | ${data.tahun_kerja}
-    </div>
-    <div style="margin-top: 3px;">
-      ${data.keterangan_kerja}
-    </div>
+  </div>
+  <h3 class="section-title">PENGALAMAN</h3>
+  <div class="work-experience">
+    <div>${data.tempat_kerja}</div>
+    <div>${data.posisi_kerja} | ${data.tahun_kerja}</div>
+    <div>${data.keterangan_kerja}</div>
+  </div>
   `;
   return cvHTML;
 }
