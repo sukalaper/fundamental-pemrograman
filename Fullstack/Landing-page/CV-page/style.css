@@ -1,122 +1,166 @@
 body {
-background-color: #F9FBE7;
-font-family: 'Poppins', sans-serif;
+  background-color: #F9FBE7; /* Warna latar belakang untuk body */
+  font-family: 'Poppins', sans-serif; /* Jenis font untuk teks */
 }
 
 .navbar {
-background-color: #FEA1A1;
-padding: 8px;
-border-radius: 10px;
-text-align: center;
-width: 15%;
-margin: auto;
-display: flex;
-align-items: center;
-justify-content: center;
-height: 48px;
-transition: box-shadow 0.2s ease;
+  background-color: #FEA1A1; /* Warna latar belakang untuk navbar */
+  padding: 8px; /* Ruang di dalam navbar */
+  border-radius: 10px; /* Membuat sudut-sudut navbar melengkung */
+  text-align: center; /* Posisi teks menjadi tengah */
+  width: 15%; /* Lebar navbar */
+  margin: auto; /* Posisi navbar menjadi tengah */
+  display: flex; /* Mengatur tata letak navbar menggunakan flexbox */
+  align-items: center; /* Mengatur tata letak vertikal menjadi tengah */
+  justify-content: center; /* Mengatur tata letak horizontal menjadi tengah */
+  height: 48px; /* Tinggi navbar */
+  transition: box-shadow 0.2s ease; /* Efek transisi saat ada interaksi */
 }
 
 .navbar:hover {
-box-shadow: 6px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 8px 1px rgba(0, 0, 0, 0.3); /* Efek bayangan saat cursor berada di atas navbar */
 }
 
 .navbar h1 {
-color: #F9FBE7;
-font-size: 22px;
+  color: #F9FBE7; /* Warna teks dalam navbar */
+  font-size: 22px; /* Ukuran font untuk teks dalam navbar */
+}
+
+.cv-container {
+  line-height: 10px;
+}
+
+.cv-container h2 {
+  color: #213555;
+  text-transform: uppercase;
+}
+
+.cv-container h3 {
+  color: #213555;
+}
+
+.contact-details {
+  margin-top: 10px;
+}
+
+.contact-details i {
+  padding-left: 3px;
+}
+
+.section-title {
+  margin-top: 35px;
+  padding: 6px;
+  letter-spacing: 3px;
+  color: #FBFBFB;
+  background-color: #213555;
+}
+
+.education-info {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.work-experience {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.work-experience > div {
+  margin-top: 3px;
 }
 
 .form-input {
-background-color: #F9FBE7;
-border-radius: 10px;
-padding: 12px;
-border: 3px solid #ECCDB4;
-width: 100%;
-margin-bottom: 10px;
+  background-color: #F9FBE7; /* Warna latar belakang untuk elemen input */
+  border-radius: 10px; /* Membuat sudut-sudut elemen input melengkung */
+  padding: 12px; /* Ruang di dalam elemen input */
+  border: 3px solid #ECCDB4; /* Tampilan border elemen input */
+  width: 100%; /* Lebar elemen input */
+  margin-bottom: 10px; /* Jarak antara elemen input */
 }
 
 .form-input::placeholder {
-color: #18122B;
+  color: #18122B; /* Warna teks placeholder dalam elemen input */
 }
 
 .form-input:focus {
-outline: none;
-border-color: #FEA1A1;
+  outline: none; /* Menghilangkan outline saat elemen input aktif */
+  border-color: #FEA1A1; /* Tampilan border elemen input saat aktif */
 }
 
 h1 {
-text-align: center;
+  text-align: center; /* Posisi teks menjadi tengah */
 }
 
 h3, h4 {
-color: #FEA1A1;
-margin-bottom: 6px;
+  color: #FEA1A1; /* Warna teks untuk elemen h4 */
+  margin-bottom: 6px;
 }
 
 p {
-font-family: Arial, sans-serif;
-color: #FEA1A1;
+  font-family: Arial, sans-serif;
+  color: #FEA1A1;
 }
 
 form {
-max-width: 500px;
-margin: auto;
+  max-width: 500px; /* Lebar maksimum form */
+  margin: auto; /* Posisi form menjadi tengah */
 }
 
 input,
 textarea {
-display: block;
-width: 100%;
-margin-bottom: 10px;
+  display: block; /* Membuat elemen input dan textarea menjadi blok */
+  width: 100%; /* Lebar elemen input dan textarea */
+  margin-bottom: 10px; /* Jarak antara elemen input dan textarea */
 }
 
-.button-1,
+.button-1, 
 .button-2 {
-display: block;
-width: auto;
-padding: 13px;
-margin-top: 15px;
-margin-bottom: 20px;
-background-color: #FEA1A1;
-color: #fff;
-border: none;
-border-radius: 10px;
-cursor: pointer;
-transition: box-shadow 0.4s ease;
+  display: block; /* Membuat elemen button menjadi blok */
+  width: auto; /* Lebar elemen button */
+  padding: 13px; /* Ruang di dalam elemen button */
+  margin-top: 15px; /* Batas atas button */
+  margin-bottom: 20px; /* Batas bawah button */
+  background-color: #FEA1A1; /* Warna latar belakang untuk button */
+  color: #fff; /* Warna teks untuk button */
+  border: none; /* Menghilangkan border pada button */
+  border-radius: 10px; /* Membuat sudut-sudut button melengkung */
+  cursor: pointer; /* Mengubah cursor saat di atas button */
+  transition: box-shadow 0.4s ease; /* Efek transisi saat ada interaksi */
 }
 
 .button-2 {
-background-color: #ECCDB4;
+  background-color: #ECCDB4; /* Warna latar belakang alternatif untuk button */
 }
 
 .button-1:hover,
 .button-2:hover {
-box-shadow: 6px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 8px 1px rgba(0, 0, 0, 0.3); /* Efek bayangan pada cursor saat berada di atas tombol .button-1 atau .button-2 */
 }
 
 #hasilCV {
-margin-bottom: 35px;
-border: 1px solid #FEA1A1;
-border-radius: 8px;
-padding: 50px;
-transition: box-shadow 0.2s ease;
+  margin-bottom: 35px;
+  border: 1px solid #FEA1A1; /* Tampilan border elemen hasilCV */
+  border-radius: 8px;
+  padding: 50px; /* Ruang di dalam elemen hasilCV */
+  transition: box-shadow 0.2s ease; 
 }
 
 #hasilCV:hover {
-box-shadow: 3px 3px 6px #ECCDB4;
+  box-shadow: 3px 3px 6px #ECCDB4; 
 }
 
 .footer {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-text-align: center;
-color: #FEA1A1;
-padding: 10px;
+  position: fixed; /* Menetapkan posisi elemen footer */
+  bottom: 0; /* Posisi bawah elemen footer */
+  left: 0; /* Posisi kiri elemen footer */
+  right: 0; /* Posisi kanan elemen footer */
+  text-align: center; /* Posisi teks dalam elemen footer menjadi tengah */
+  color: #FEA1A1; /* Warna teks dalam elemen footer */
+  padding: 10px; /* Ruang di dalam elemen footer */
 }
 
 .footer p {
-margin: 0;
-font-size: 14px;
+  margin: 0; /* Menghilangkan margin pada elemen p dalam footer */
+  font-size: 14px; /* Ukuran font untuk teks dalam elemen p dalam footer */
 }
