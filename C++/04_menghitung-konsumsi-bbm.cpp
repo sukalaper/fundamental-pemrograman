@@ -1,30 +1,27 @@
-// UNFINISHED !
-
 #include <iostream>
-#include <iomanip>
 
-float kapasitasTangki(){
-  float getData;
-  std::cout<<"Masukan kapasitas tangki motor anda: ";std::cin>>getData;
-  return getData;
-}
+class Vehicle{
+private:
+  double fuelEfficiency; // Efisiensi bahan bakar dalam kilometer per liter
 
-double isiTangkiAwal(){
-  double getDataTangki;
-  std::cout<<"Masukan angka pada speedometer anda saat ini: ";std::cin>>getDataTangki;
-  return getDataTangki;
-}
+public:
+  Vehicle(double efficiency) : fuelEfficiency(efficiency){}
 
-double isiTangkiAkhir(){
-  double getDataTangkiAkhir;
-  std::cout<<"Masukan angka pada speedometer anda setelah perjalanan: ";std::cin>>getDataTangkiAkhir;
-  return getDataTangkiAkhir;
-}
+  double calculateFuelConsumption(double distance){
+    return distance / fuelEfficiency;
+  }
+};
 
 int main(int argc, char *argv[]){
-  float resultTangki = kapasitasTangki();
-  double resultIsi = isiTangkiAwal();
-  double resultAkhir = isiTangkiAkhir();
-  std::cout<<"Jumlah konsumsi BBM adalah: "<<std::setprecision(3)<<(resultIsi-resultAkhir)/resultTangki;
+  double efficiency, distance;
+
+  std::cout<<"Masukkan efisiensi bahan bakar kendaraan (km/liter): ";std::cin>>efficiency;
+  std::cout<<"Masukkan jarak yang ditempuh (kilometer): ";std::cin>>distance;
+
+  Vehicle vehicle(efficiency);
+  double fuelConsumption = vehicle.calculateFuelConsumption(distance);
+
+  std::cout<<"Konsumsi bahan bakar: "<<fuelConsumption<<" liter\n";
+
   return 0;
 }
