@@ -18,19 +18,19 @@ Berikut ini adalah daftar website yang dapat membantu Anda meningkatkan produkti
 [Duolingo](https://id.duolingo.com) adalah platform pembelajaran bahasa yang interaktif dan menyenangkan. Anda dapat belajar lebih dari 30 bahasa dengan latihan bermain-main dan tes singkat. Duolingo memungkinkan Anda untuk mempelajari bahasa dalam waktu luang Anda dan meningkatkan produktivitas dengan memanfaatkan waktu luang secara efektif.
 
 ### 6. Todoist
-Todoist adalah aplikasi manajemen tugas yang membantu Anda mengatur dan melacak daftar tugas harian, mingguan, dan bulanan. Anda dapat membuat tugas, mengatur tenggat waktu, menambahkan catatan, dan berbagi tugas dengan tim Anda. Todoist juga menyediakan fitur pengingat yang dapat membantu Anda tetap pada jalur.
+[Todoist](https://todoist.com) adalah aplikasi manajemen tugas yang membantu Anda mengatur dan melacak daftar tugas harian, mingguan, dan bulanan. Anda dapat membuat tugas, mengatur tenggat waktu, menambahkan catatan, dan berbagi tugas dengan tim Anda. Todoist juga menyediakan fitur pengingat yang dapat membantu Anda tetap pada jalur.
 
 ### 7. Calm
-Calm adalah aplikasi meditasi dan relaksasi yang membantu mengurangi stres dan meningkatkan fokus Anda. Dengan berbagai meditasi, musik tidur, dan suara relaksasi, Calm membantu Anda mencapai ketenangan pikiran dan meningkatkan kualitas tidur Anda.
+[Calm](https://www.calm.com) adalah aplikasi meditasi dan relaksasi yang membantu mengurangi stres dan meningkatkan fokus Anda. Dengan berbagai meditasi, musik tidur, dan suara relaksasi, Calm membantu Anda mencapai ketenangan pikiran dan meningkatkan kualitas tidur Anda.
 
 ### 8. Pocket
-Pocket adalah alat bookmarking yang memungkinkan Anda menyimpan artikel, video, dan konten web lainnya untuk dibaca atau ditonton nanti. Dengan menggunakan Pocket, Anda dapat menghindari pemborosan waktu saat Anda menemukan konten menarik tetapi tidak memiliki waktu untuk membacanya.
+[Pocket](https://getpocket.com/en) adalah alat bookmarking yang memungkinkan Anda menyimpan artikel, video, dan konten web lainnya untuk dibaca atau ditonton nanti. Dengan menggunakan Pocket, Anda dapat menghindari pemborosan waktu saat Anda menemukan konten menarik tetapi tidak memiliki waktu untuk membacanya.
 
 ### 9. Grammarly
-Grammarly adalah alat pengecekan tata bahasa dan ejaan yang membantu Anda menulis dengan lebih baik. Grammarly dapat mengidentifikasi kesalahan tata bahasa, ejaan, dan gaya penulisan. Ini bekerja di berbagai platform dan membantu meningkatkan kualitas tulisan Anda.
+[Grammarly](https://www.grammarly.com) adalah alat pengecekan tata bahasa dan ejaan yang membantu Anda menulis dengan lebih baik. Grammarly dapat mengidentifikasi kesalahan tata bahasa, ejaan, dan gaya penulisan. Ini bekerja di berbagai platform dan membantu meningkatkan kualitas tulisan Anda.
 
 ### 10. Habitica
-Habitica adalah aplikasi yang menggabungkan elemen permainan dengan manajemen produktivitas. Anda dapat mengubah kebiasaan baik dan tujuan dalam permainan, di mana Anda mendapatkan hadiah virtual saat Anda mencapai tujuan dan konsekuensi jika Anda melanggar kebiasaan yang diinginkan.
+[Habitica](https://habitica.com/static/home) adalah aplikasi yang menggabungkan elemen permainan dengan manajemen produktivitas. Anda dapat mengubah kebiasaan baik dan tujuan dalam permainan, di mana Anda mendapatkan hadiah virtual saat Anda mencapai tujuan dan konsekuensi jika Anda melanggar kebiasaan yang diinginkan.
 
 Ini adalah beberapa website yang dapat membantu Anda meningkatkan produktivitas dalam kehidupan sehari-hari. Silakan coba dan pilih yang sesuai dengan kebutuhan Anda. Selamat mencoba!
 
