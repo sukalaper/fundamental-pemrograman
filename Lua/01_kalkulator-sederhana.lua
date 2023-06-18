@@ -31,17 +31,17 @@ print("4. Pembagian")
 local pilihan = tonumber(io.read())
 
 if pilihan == 1 then
-    hasil = matematika.tambah(angka1, angka2)
-    print("Hasil penjumlahan: " .. hasil)
+  hasil = matematika.tambah(angka1, angka2)
+  print("Hasil penjumlahan: " .. hasil)
 elseif pilihan == 2 then
-    hasil = matematika.kurang(angka1, angka2)
-    print("Hasil pengurangan: " .. hasil)
+  hasil = matematika.kurang(angka1, angka2)
+  print("Hasil pengurangan: " .. hasil)
 elseif pilihan == 3 then
-    hasil = matematika.kali(angka1, angka2)
-    print("Hasil perkalian: " .. hasil)
+  hasil = matematika.kali(angka1, angka2)
+  print("Hasil perkalian: " .. hasil)
 elseif pilihan == 4 then
-    hasil = matematika.bagi(angka1, angka2)
-    print("Hasil pembagian: " .. hasil)
+  hasil = matematika.bagi(angka1, angka2)
+  print("Hasil pembagian: " .. hasil)
 else
-    print("Pilihan tidak valid silahkan ulangi!")
+  print("Pilihan tidak valid silahkan ulangi!")
 end
