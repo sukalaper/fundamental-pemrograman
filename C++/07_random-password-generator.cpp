@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
 
 void headerProgram(){
 std::cout<<R"(
