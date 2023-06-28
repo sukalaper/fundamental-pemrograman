@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-class UIManager {
+class UIManager{
 public:
-  static void printHeader() {
+  static void printHeader(){
     std::cout << R"(
 ______  ___  _____ _____ _    _ _________________   _____ _____ _   _ ___________  ___ _____ ___________ 
 | ___ \/ _ \/  ___/  ___| |  | |  _  | ___ |  _  \ |  __ |  ___| \ | |  ___| ___ \/ _ |_   _|  _  | ___ \
