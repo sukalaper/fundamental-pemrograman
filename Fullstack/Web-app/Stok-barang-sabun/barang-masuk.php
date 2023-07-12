@@ -104,10 +104,11 @@ require 'cek.php';
                 <table id="datatablesSimple">
                   <thead>
                     <tr>
+                      <th>Tanggal</th>
                       <th>ID Barang</th>
                       <th>Nama Barang</th>
-                      <th>Tanggal</th>
                       <th>Jumlah Barang</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -115,19 +116,27 @@ require 'cek.php';
                     $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM masuk M, stok S WHERE S.idbarang = M.idbarang");
                     while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
                       $idbarang = $data['idbarang'];
+                      $idmasuk = $data['idmasuk'];
                       $namabarang = $data['namabarang'];
                       $tanggal = $data['tanggal'];
                       $qty = $data['qty'];
                     ?>
                     <tr>
-                      <td><?=$idbarang;?></td>
-                      <td><?=$namabarang;?></td>
-                      <td><?=$tanggal;?></td>
-                      <td><?=$qty;?></td>
+                      <td><?php echo $tanggal; ?></td>
+                      <td><?php echo $idbarang; ?></td>
+                      <td><?php echo $namabarang; ?></td>
+                      <td><?php echo $qty; ?></td>
+                      <td>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?=$idbarang;?>">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <input type="hidden" name="barangdihapus" value="<?=$idbarang;?>"> 
+                        <button type="button" class="btn btn-danger ms-2" data-bs-toggle="modal" data-bs-target="#delete<?=$idbarang;?>">
+                          <i class="fas fa-trash"></i> 
+                        </button> 
+                      </td>  
                     </tr>
-                    <?php
-                    };
-                    ?>
+                    <?php } ?>
                   </tbody>
                 </table>
               </div>
@@ -157,6 +166,7 @@ require 'cek.php';
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
   <script src="js/datatables-simple-demo.js"></script>
 </body>
+</html>
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -168,15 +178,13 @@ require 'cek.php';
         <div class="modal-body">
           <select name="barangnya" class="form-control mb-3">
             <?php 
-            $ambildata = mysqli_query($conn,"select * from stok");
+            $ambildata = mysqli_query($conn,"SELECT * FROM stok");
             while($fetcharray = mysqli_fetch_array($ambildata)){
               $barangnya = $fetcharray['namabarang'];
               $idbarangnya = $fetcharray['idbarang'];
             ?>
-              <option value="<?=$idbarangnya;?>"><?=$barangnya;?></option>
-            <?php
-            }
-            ?>
+              <option value="<?php echo $idbarangnya; ?>"><?php echo $barangnya; ?></option>
+            <?php } ?>
           </select>
           <input type="number" name="qty" placeholder="Jumlah Barang" class="form-control mb-3" required>
           <button type="submit" class="btn btn-primary" name="barangmasuk">Submit</button>
@@ -185,5 +193,50 @@ require 'cek.php';
     </div>
   </div>
 </div>
-</html>
-
+<?php
+$result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM masuk M, stok S WHERE S.idbarang = M.idbarang");
+while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
+  $idbarang = $data['idbarang'];
+  $idmasuk = $data['idmasuk'];
+  $namabarang = $data['namabarang'];
+  $tanggal = $data['tanggal'];
+  $qty = $data['qty'];
+?>
+<div class="modal fade" id="edit<?=$idbarang;?>">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Barang</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="post">
+        <div class="modal-body">
+          <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
+          <input type="text" name="namabarang" value="<?php echo $namabarang; ?>" class="form-control mb-3" required>
+          <input type="number" name="qty" value="<?php echo $qty; ?>" placeholder="Jumlah Barang" class="form-control mb-3" required>
+          <input type="hidden" name="idmasuk" value="<?php echo $idmasuk; ?>">
+          <button type="submit" class="btn btn-primary" name="updatebarangmasuk">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="delete<?=$idbarang;?>">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Hapus Barang?</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="post">
+        <div class="modal-body">
+          Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?>?
+          <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
+          <input type="hidden" name="kty" value="<?php echo $qty; ?>">
+          <button type="submit" class="btn btn-danger col-12 mt-3" name="hapusbarangmasuk">Hapus</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<?php } ?>
