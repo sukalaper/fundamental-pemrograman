@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRUD Barang</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .button-container {
+      text-align: right;
+    }
+
+    .button-container button {
+      padding: 8px 12px;
+      margin-left: 5px;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    /* CSS responsif */
+    @media only screen and (max-width: 768px) {
+      form label,
+      form input,
+      form textarea,
+      .button-container button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .button-container {
+        text-align: left;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <?php
+  // Konfigurasi database
+  $host = 'localhost';
+  $username = 'username';
+  $password = 'password';
+  $database = 'nama_database';
+
+  // Membuat koneksi ke database
+  $conn = mysqli_connect($host, $username, $password, $database);
+
+  // Memeriksa koneksi
+  if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+  }
+
+  // Inisialisasi pesan
+  $message = '';
+  $messageClass = '';
+
+  // Menangani aksi
+  if (isset($_POST['submit'])) {
+    $namaBarang = $_POST['nama_barang'];
+    $hargaModal = $_POST['harga_modal'];
+    $hargaJual = $_POST['harga_jual'];
+    $jumlah = $_POST['jumlah'];
+    $keterangan = $_POST['keterangan'];
+
+    // Tambah data baru
+    $sql = "INSERT INTO barang (nama_barang, harga_modal, harga_jual, jumlah, keterangan) VALUES ('$namaBarang', '$hargaModal', '$hargaJual', '$jumlah', '$keterangan')";
+    if (mysqli_query($conn, $sql)) {
+      $message = "Data berhasil ditambahkan";
+      $messageClass = "success";
+    } else {
+      $message = "Terjadi kesalahan: " . mysqli_error($conn);
+      $messageClass = "error";
+    }
+  } elseif (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+
+    // Hapus data
+    $sql = "DELETE FROM barang WHERE id=$id";
+    if (mysqli_query($conn, $sql)) {
+      $message = "Data berhasil dihapus";
+      $messageClass = "success";
+    } else {
+      $message = "Terjadi kesalahan: " . mysqli_error($conn);
+      $messageClass = "error";
+    }
+  }
+
+  // Ambil data barang
+  $sql = "SELECT * FROM barang";
+  $result = mysqli_query($conn, $sql);
+  ?>
+
+  <h1>CRUD Barang</h1>
+
+  <?php if ($message) { ?>
+    <div class="message <?php echo $messageClass; ?>"><?php echo $message; ?></div>
+  <?php } ?>
+
+  <form method="POST" action="">
+    <label for="nama_barang">Nama Barang:</label>
+    <input type="text" id="nama_barang" name="nama_barang" required>
+    <label for="harga_modal">Harga Modal:</label>
+    <input type="number" id="harga_modal" name="harga_modal" required>
+    <label for="harga_jual">Harga Jual:</label>
+    <input type="number" id="harga_jual" name="harga_jual" required>
+    <label for="jumlah">Jumlah:</label>
+    <input type="number" id="jumlah" name="jumlah" required>
+    <label for="keterangan">Keterangan:</label>
+    <textarea id="keterangan" name="keterangan" required></textarea>
+    <div class="button-container">
+      <button type="submit" name="submit">Simpan</button>
+      <button type="reset">Bersihkan</button>
+    </div>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Barang</th>
+        <th>Harga Modal</th>
+        <th>Harga Jual</th>
+        <th>Jumlah</th>
+        <th>Keterangan</th>
+        <th>Tindakan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+        <tr>
+          <td><?php echo $row['nama_barang']; ?></td>
+          <td><?php echo $row['harga_modal']; ?></td>
+          <td><?php echo $row['harga_jual']; ?></td>
+          <td><?php echo $row['jumlah']; ?></td>
+          <td><?php echo $row['keterangan']; ?></td>
+          <td>
+            <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
+            <a href="?delete=<?php echo $row['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+          </td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
+
+  <?php
+  // Menutup koneksi database
+  mysqli_close($conn);
+  ?>
+</body>
+    </html>
+  
