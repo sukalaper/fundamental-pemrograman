@@ -4,14 +4,8 @@
 class UIManager{
 public:
   static void printHeader(){
-    std::cout << R"(
-______  ___  _____ _____ _    _ _________________   _____ _____ _   _ ___________  ___ _____ ___________ 
-| ___ \/ _ \/  ___/  ___| |  | |  _  | ___ |  _  \ |  __ |  ___| \ | |  ___| ___ \/ _ |_   _|  _  | ___ \
-| |_/ / /_\ \ `--.\ `--.| |  | | | | | |_/ | | | | | |  \| |__ |  \| | |__ | |_/ / /_\ \| | | | | | |_/ /
-|  __/|  _  |`--. \`--. | |/\| | | | |    /| | | | | | __|  __|| . ` |  __||    /|  _  || | | | | |    / 
-| |   | | | /\__/ /\__/ \  /\  \ \_/ | |\ \| |/ /  | |_\ | |___| |\  | |___| |\ \| | | || | \ \_/ | |\ \ 
-\_|   \_| |_\____/\____/ \/  \/ \___/\_| \_|___/    \____\____/\_| \_\____/\_| \_\_| |_/\_/  \___/\_| \_|                                                                              
-)" << '\n';
+    std::cout<<"\tPASSWORD RANDOM GENERATOR\n";
+    std::cout<<"\t-------------------------\n\n";
   }
 };
 
@@ -24,10 +18,10 @@ int getRandomIndex(int maxIndex){
 int getLengthFromUser(){
   std::string inputUser;
   int finalOutput = 0;
-  std::cout<<"Masukan panjang password yang diinginkan: ";std::cin>>inputUser;
-    for (int a = 0; a < inputUser.length(); a++){
-      if ((inputUser[a] >= 'a' && inputUser[a] <= 'z') || (inputUser[a] >= 'A' && inputUser[a] <= 'Z')){
-        std::cout<<"Input harus berupa angka, bukan abjad!"<<'\n';
+  std::cout<<"- Berapa panjang password yang diinginkan? ";std::cin>>inputUser;
+    for(int a = 0; a < inputUser.length(); a++){
+      if((inputUser[a] >= 'a' && inputUser[a] <= 'z') || (inputUser[a] >= 'A' && inputUser[a] <= 'Z')){
+        std::cout<<"- Input harus berupa angka, bukan abjad!"<<'\n';
           return getLengthFromUser();
       }
       finalOutput = finalOutput * 10 + inputUser[a] - '0';
@@ -37,13 +31,13 @@ int getLengthFromUser(){
 
 int getNumStringFromUser(){
   int numStrings;  
-  std::cout<<"Masukan banyaknya output password yang diinginkan: ";std::cin>>numStrings;
+  std::cout<<"- Berapa banyaknya keluaran password yang diinginkan? ";std::cin>>numStrings;
   return numStrings;
 }
 
 std::string generateRandomString(int length){
  std::string randomStr;
-  for (int i = 0; i < length; ++i) {
+  for(int i = 0; i < length; ++i){
     randomStr += ALNUM[getRandomIndex(ALNUM.size())];
   }
   return randomStr;
