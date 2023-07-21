@@ -44,7 +44,11 @@ while True:
     ret, frame = cap.read()
 
     if not ret:
-        print("Tidak dapat membaca frame dari kamera")
+        print("Tidak dapat membaca frame dari kamera!")
+        break
+
+    key = cv2.waitKey(1) & 0xFF
+    if key == ord('q'):
         break
 
     hsv_image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -62,6 +66,10 @@ while True:
 
     total_area_pixel = mask.shape[0] * mask.shape[1]
     persentase_area = (total_area / total_area_pixel) * 100
+
+    # Tampilkan informasi hasil deteksi objek di terminal
+    print("Jumlah Objek yang Terdeteksi:", jumlah_objek)
+    print("Persentase Area Objek:", persentase_area)
 
     cv2.imshow('Gambar Asli', frame)
     cv2.imshow('Hasil Deteksi Objek', result)
