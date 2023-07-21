@@ -21,8 +21,6 @@
 # SOFTWARE
 
 import cv2
-import openpyxl
-import numpy as np
 import pandas as pd
 
 def on_hue_change(value):
@@ -44,7 +42,6 @@ cv2.namedWindow('Hasil Deteksi Objek')
 cv2.createTrackbar('HUE', 'Hasil Deteksi Objek', hue_value, 180, on_hue_change)
 
 data = {
-    'Citra Hasil': [],
     'Toleransi (H, S, V)': [],
     'Jumlah Objek Terdeteksi': [],
     'Total Area Terdeteksi (Pixel)': [],
@@ -60,16 +57,12 @@ while True:
 
     hsv_image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-
-    lower_color = np.array([hue_value-10, 50, 50])  
-    upper_color = np.array([hue_value+10, 255, 255]) 
+    lower_color = (hue_value - 10, 50, 50)
+    upper_color = (hue_value + 10, 255, 255)
 
     mask = cv2.inRange(hsv_image, lower_color, upper_color)
 
     result = cv2.bitwise_and(frame, frame, mask=mask)
-
-    result_hex = result.copy()
-    result_hex[np.where(mask != 0)] = [0, 0, 255]  
 
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     jumlah_objek = len(contours)
@@ -78,7 +71,6 @@ while True:
     total_area_pixel = mask.shape[0] * mask.shape[1]
     persentase_area = (total_area / total_area_pixel) * 100
 
-    data['Citra Hasil'].append(result_hex)
     data['Toleransi (H, S, V)'].append([hue_value, 10, 10])
     data['Jumlah Objek Terdeteksi'].append(jumlah_objek)
     data['Total Area Terdeteksi (Pixel)'].append(total_area)
@@ -97,10 +89,7 @@ print("Mohon tunggu, hasil deteksi sedang di import kedalam format .xlsx")
 
 df = pd.DataFrame(data)
 
-df['Citra Hasil'] = df['Citra Hasil'].apply(lambda x: ['{:02X}'.format(pixel[2]) for pixel in x.reshape(-1, 3)])
-
-print(df)
-
 df.to_excel('hasil_deteksi.xlsx', index=False)
 
 print("Proses import selesai. Hasil deteksi telah diexport ke hasil_deteksi.xlsx")
+  
