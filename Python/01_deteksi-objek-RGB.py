@@ -21,7 +21,6 @@
 # SOFTWARE
 
 import cv2
-import pandas as pd
 
 def on_hue_change(value):
     global hue_value
@@ -40,13 +39,6 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 320)
 
 cv2.namedWindow('Hasil Deteksi Objek')
 cv2.createTrackbar('HUE', 'Hasil Deteksi Objek', hue_value, 180, on_hue_change)
-
-data = {
-    'Toleransi (H, S, V)': [],
-    'Jumlah Objek Terdeteksi': [],
-    'Total Area Terdeteksi (Pixel)': [],
-    'Persentase Area Terdeteksi (%)': []
-}
 
 while True:
     ret, frame = cap.read()
@@ -71,11 +63,6 @@ while True:
     total_area_pixel = mask.shape[0] * mask.shape[1]
     persentase_area = (total_area / total_area_pixel) * 100
 
-    data['Toleransi (H, S, V)'].append([hue_value, 10, 10])
-    data['Jumlah Objek Terdeteksi'].append(jumlah_objek)
-    data['Total Area Terdeteksi (Pixel)'].append(total_area)
-    data['Persentase Area Terdeteksi (%)'].append(persentase_area)
-
     cv2.imshow('Gambar Asli', frame)
     cv2.imshow('Hasil Deteksi Objek', result)
 
@@ -84,12 +71,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
-print("Mohon tunggu, hasil deteksi sedang di import kedalam format .xlsx")
-
-df = pd.DataFrame(data)
-
-df.to_excel('hasil_deteksi.xlsx', index=False)
-
-print("Proses import selesai. Hasil deteksi telah diexport ke hasil_deteksi.xlsx")
-  
