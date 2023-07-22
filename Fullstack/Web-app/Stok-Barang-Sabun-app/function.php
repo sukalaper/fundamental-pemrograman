@@ -34,10 +34,9 @@ $conn = mysqli_connect("localhost","root","","stok-barang");
 // Menambah barang baru
   if(isset($_POST['addnewbarang'])){
     $namabarang = mysqli_real_escape_string($conn, $_POST['namabarang']);
-    $namabarang = ucwords(strtolower($namabarang)); // Convert the first character of each word to uppercase
+    $namabarang = ucwords(strtolower($namabarang));
     $satuanberat = mysqli_real_escape_string($conn, $_POST['satuanberat']);
     $jumlahbarang = mysqli_real_escape_string($conn, $_POST['jumlahbarang']);
-    // Check if the item already exists in the database
     $result_cek_barang = mysqli_query($conn, "SELECT COUNT(*) AS count FROM stok WHERE LOWER(namabarang) = LOWER('$namabarang')");  
     $data_cek_barang = mysqli_fetch_assoc($result_cek_barang);
     $barang_count = $data_cek_barang['count'];
