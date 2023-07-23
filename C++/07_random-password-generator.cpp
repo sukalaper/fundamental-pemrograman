@@ -43,12 +43,12 @@ std::string generateRandomString(int length){
   return randomStr;
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]){
   UIManager::printHeader();
   srand(time(0));
   int length = getLengthFromUser();
   int numStrings = getNumStringFromUser();
-    for (int i = 0; i < numStrings; ++i) {
+    for (int i = 0; i < numStrings; ++i){
       std::string randomString = generateRandomString(length);
       std::cout<<'\n'<<randomString;
     }
