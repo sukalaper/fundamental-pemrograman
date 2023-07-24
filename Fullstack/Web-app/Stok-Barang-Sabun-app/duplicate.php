@@ -6,7 +6,7 @@
 <body>
   <script>
     alert("Barang dengan nama yang sama sudah ada!");
-    history.go(-1); <!-- Agar halaman kembali ke semula -->
+    history.go(-1); <!-- Agar halaman dialihkan kembali ke semula. -->
   </script>
 </body>
 </html>
