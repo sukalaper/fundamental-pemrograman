@@ -87,14 +87,14 @@ require 'cek.php';
         </div>
         <div class="sb-sidenav-footer">
           <div class="small">Logged in as:</div>
-          Administrator
+          Sukalaper
         </div>
       </nav>
     </div>
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4">
-          <h1 class="mt-4">Stok Barang Sabun</h1>
+          <h1 class="mt-4">Toko Sabun Sukalaper</h1>
           <div class="card mb-4">
             <div class="card-header">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="float: right;">
@@ -116,15 +116,15 @@ require 'cek.php';
                 </thead>
                 <tbody>
                   <?php 
-                  $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM stok");
-                  $i = 1;
-                  while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
-                    $namabarang = $data['namabarang'];
-                    $hargamodal = $data['hargamodal'];
-                    $satuanberat = $data['satuanberat'];
-                    $jumlahbarang = $data['jumlahbarang'];
-                    $hargajual = $data['hargajual'];
-                    $idbarang = $data['idbarang'];
+                    $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM stok");
+                    $i = 1;
+                    while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
+                      $namabarang = $data['namabarang'];
+                      $hargamodal = $data['hargamodal'];
+                      $satuanberat = $data['satuanberat'];
+                      $jumlahbarang = $data['jumlahbarang'];
+                      $hargajual = $data['hargajual'];
+                      $idbarang = $data['idbarang'];
                   ?>
                   <tr>
                     <td><?=$i++;?></td>
@@ -154,7 +154,11 @@ require 'cek.php';
                           <div class="modal-body">
                             <input type="hidden" name="idbarang" value="<?=$idbarang;?>">
                             <input type="text" name="namabarang" value="<?=$namabarang;?>" class="form-control mb-3" required>
-                            <input type="number" name="satuanberat" placeholder="Satuan Berat" class="form-control mb-3" required>
+                            <input type="number" name="hargamodal" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Modal (Rp)" class="form-control mb-0" required>
+                            <p style="font-size: 1px; color: red;">*Jika harga barang adalah Rp1.000 isi kolom dengan angka 1</p>
+                            <input type="number" name="satuanberat" placeholder="Satuan Berat" class="form-control mb-0" required>
+                            <p style="font-size: 1px; color: red;">*Secara matematis, satuan <em>Gram</em> dan <em>Mili</em> adalah ukuran yang sama</p>
+                            <input type="number" name="hargajual" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Jual (Rp)" class="form-control mb-3" required>
                             <button type="submit" class="btn btn-primary" name="updatebarang">Submit</button>
                           </div>
                         </form>
@@ -179,7 +183,7 @@ require 'cek.php';
                     </div>
                   </div>
                   <?php
-                  }; 
+                    }; 
                   ?>
                 </tbody>
               </table>
@@ -201,6 +205,13 @@ require 'cek.php';
       </footer>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+  <script src="assets/demo/chart-area-demo.js"></script>
+  <script src="assets/demo/chart-bar-demo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+  <script src="js/datatables-simple-demo.js"></script>
 </body>
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
@@ -211,11 +222,12 @@ require 'cek.php';
       </div>
       <form method="post">
         <div class="modal-body">
-          <input type="text" name="namabarang" placeholder="Nama Barang.." class="form-control mb-3" required>
-          <input type="number" name="hargamodal" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Modal (Rp)" class="form-control mb-3" required>
-          <input type="number" name="satuanberat" placeholder="Satuan Berat.." class="form-control mb-1" required>
-          <p style="font-size: 0.8em; color: red;">*Secara matematis, satuan <em>Gram</em> dan <em>Mili</em> adalah ukuran yang sama.</p>
-          <input type="number" name="jumlahbarang" placeholder="Jumlah Barang.." class="form-control mb-3" required>
+          <input type="text" name="namabarang" placeholder="Nama Barang" class="form-control mb-3" required>
+          <input type="number" name="hargamodal" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Modal (Rp)" class="form-control mb-0" required>
+          <p style="font-size: 1px; color: red;">*Jika harga barang adalah Rp1.000 isi kolom dengan angka 1</p>
+          <input type="number" name="satuanberat" placeholder="Satuan Berat" class="form-control mb-0" required>
+          <p style="font-size: 1px; color: red;">*Secara matematis, satuan <em>Gram</em> dan <em>Mili</em> adalah ukuran yang sama</p>
+          <input type="number" name="jumlahbarang" placeholder="Jumlah Barang" class="form-control mb-3" required>
           <input type="number" name="hargajual" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Jual (Rp)" class="form-control mb-3" required>
           <button type="submit" class="btn btn-primary" name="addnewbarang">Submit</button>
         </div>
