@@ -100,7 +100,7 @@ require 'cek.php';
           <div class="card mb-4">
             <div class="card-header">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="float: right;">
-                Tambah Barang
+                <span class="fas fa-plus"></span> Tambah Barang Baru
               </button>
             </div>
             <div class="card-body">
@@ -109,26 +109,32 @@ require 'cek.php';
                   <tr>
                     <th>No</th>
                     <th>Nama Barang</th>
-                    <th>Satuan Berat Dalam Gram</th>
+                    <th>Harga Modal</th>
+                    <th>Satuan Berat (g) (mL)</th>
                     <th>Jumlah Barang</th>
+                    <th>Harga Jual</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php 
-                    $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM stok");
-                    $i = 1;
-                    while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
-                      $namabarang = $data['namabarang'];
-                      $satuanberat = $data['satuanberat'];
-                      $jumlahbarang = $data['jumlahbarang'];
-                      $idbarang = $data['idbarang'];
+                  $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM stok");
+                  $i = 1;
+                  while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
+                    $namabarang = $data['namabarang'];
+                    $hargamodal = $data['hargamodal'];
+                    $satuanberat = $data['satuanberat'];
+                    $jumlahbarang = $data['jumlahbarang'];
+                    $hargajual = $data['hargajual'];
+                    $idbarang = $data['idbarang'];
                   ?>
                   <tr>
                     <td><?=$i++;?></td>
                     <td><?=$namabarang;?></td>
+                    <td><?=$hargamodal;?></td>
                     <td><?=$satuanberat;?></td>
                     <td><?=$jumlahbarang;?></td>
+                    <td><?=$hargajual;?></td>
                     <td>
                       <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?=$idbarang;?>">
                         <i class="fas fa-edit"></i>
@@ -175,7 +181,7 @@ require 'cek.php';
                     </div>
                   </div>
                   <?php
-                    }; 
+                  }; 
                   ?>
                 </tbody>
               </table>
@@ -197,13 +203,6 @@ require 'cek.php';
       </footer>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-  <script src="assets/demo/chart-area-demo.js"></script>
-  <script src="assets/demo/chart-bar-demo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-  <script src="js/datatables-simple-demo.js"></script>
 </body>
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
@@ -214,9 +213,12 @@ require 'cek.php';
       </div>
       <form method="post">
         <div class="modal-body">
-          <input type="text" name="namabarang" placeholder="Nama Barang" class="form-control mb-3" required>
-          <input type="number" name="satuanberat" placeholder="Satuan Berat" class="form-control mb-3" required>
-          <input type="number" name="jumlahbarang" placeholder="Jumlah Barang" class="form-control mb-3" required>
+          <input type="text" name="namabarang" placeholder="Nama Barang.." class="form-control mb-3" required>
+          <input type="number" name="hargamodal" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Modal (Rp)" class="form-control mb-3" required>
+          <input type="number" name="satuanberat" placeholder="Satuan Berat.." class="form-control mb-1" required>
+          <p style="font-size: 0.8em; color: red;">*Secara matematis, satuan <em>Gram</em> dan <em>Mili</em> adalah ukuran yang sama.</p>
+          <input type="number" name="jumlahbarang" placeholder="Jumlah Barang.." class="form-control mb-3" required>
+          <input type="number" name="hargajual" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Jual (Rp)" class="form-control mb-3" required>
           <button type="submit" class="btn btn-primary" name="addnewbarang">Submit</button>
         </div>
       </form>
