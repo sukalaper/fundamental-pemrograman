@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Anda akan dialihkan dalam 5 detik..</title>
+  <title>Peringatan!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
   <style>
     body {
@@ -40,7 +40,8 @@
       history.go(-1);
     }
     Swal.fire({
-      html: 'Barang dengan nama yang sama sudah ada.<br><br>Mohon periksa kembali data yang ada.',
+      title: 'Kesalahan di sisi user',
+      html: 'Harga jual tidak boleh lebih rendah dari harga modal.',
       icon: 'error',
       confirmButtonText: 'Kembali'
     }).then((result) => {
