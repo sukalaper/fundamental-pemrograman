@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 12 Jul 2023 pada 22.51
+-- Waktu pembuatan: 26 Jul 2023 pada 21.39
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -33,21 +33,6 @@ CREATE TABLE `keluar` (
   `tanggal` timestamp NOT NULL DEFAULT current_timestamp(),
   `qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `keluar`
---
-
-INSERT INTO `keluar` (`idkeluar`, `idbarang`, `tanggal`, `qty`) VALUES
-(2, 19, '2023-05-21 17:55:44', 120),
-(3, 16, '2023-06-30 14:26:52', 5),
-(4, 16, '2023-07-11 15:59:22', 14),
-(5, 21, '2023-07-12 19:55:39', 5),
-(6, 22, '2023-07-12 19:59:06', 50),
-(7, 22, '2023-07-12 19:59:18', 20),
-(8, 22, '2023-07-12 19:59:26', 29),
-(9, 23, '2023-07-12 20:04:14', 15),
-(10, 25, '2023-07-12 20:46:32', 200);
 
 -- --------------------------------------------------------
 
@@ -86,15 +71,14 @@ CREATE TABLE `masuk` (
 --
 
 INSERT INTO `masuk` (`idmasuk`, `idbarang`, `tanggal`, `qty`) VALUES
-(30, 18, '2023-05-21 17:49:06', 4),
-(31, 19, '2023-05-21 17:54:29', 100),
-(32, 16, '2023-07-11 15:59:05', 10),
-(33, 20, '2023-07-12 19:54:29', 100),
-(34, 21, '2023-07-12 19:55:29', 12),
-(35, 23, '2023-07-12 20:04:07', 10),
-(36, 24, '2023-07-12 20:20:32', 100),
-(37, 25, '2023-07-12 20:46:23', 500),
-(38, 26, '2023-07-12 20:47:23', 1);
+(48, 43, '2023-07-25 12:37:18', 1),
+(49, 44, '2023-07-25 12:37:25', 200),
+(50, 47, '2023-07-25 19:39:52', 2),
+(51, 48, '2023-07-25 19:40:05', 2),
+(52, 47, '2023-07-25 19:45:00', 12),
+(53, 52, '2023-07-26 08:27:50', 22),
+(54, 7, '2023-07-26 03:42:12', 12),
+(55, 13, '2023-07-26 19:15:09', 12);
 
 -- --------------------------------------------------------
 
@@ -104,9 +88,11 @@ INSERT INTO `masuk` (`idmasuk`, `idbarang`, `tanggal`, `qty`) VALUES
 
 CREATE TABLE `stok` (
   `idbarang` int(11) NOT NULL,
-  `namabarang` varchar(35) DEFAULT NULL,
+  `namabarang` text CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `hargamodal` decimal(10,3) NOT NULL,
   `satuanberat` int(11) NOT NULL,
   `jumlahbarang` int(11) NOT NULL,
+  `hargajual` decimal(10,3) NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -114,8 +100,19 @@ CREATE TABLE `stok` (
 -- Dumping data untuk tabel `stok`
 --
 
-INSERT INTO `stok` (`idbarang`, `namabarang`, `satuanberat`, `jumlahbarang`, `tanggal`) VALUES
-(26, 'Daia', 700, 2, '2023-07-12 20:47:58');
+INSERT INTO `stok` (`idbarang`, `namabarang`, `hargamodal`, `satuanberat`, `jumlahbarang`, `hargajual`, `tanggal`) VALUES
+(1, 'Sabun Mandi A', '3.000', 10, 4, '5.000', '2023-07-25 17:00:00'),
+(2, 'Shampoo A', '4.000', 11, 5, '6.000', '2023-07-25 17:00:00'),
+(3, 'Sabun Mandi B', '5.000', 12, 6, '7.000', '2023-07-25 17:00:00'),
+(4, 'Shampoo B', '6.000', 13, 7, '8.000', '2023-07-25 17:00:00'),
+(5, 'Sabun Mandi C', '7.000', 14, 8, '9.000', '2023-07-25 17:00:00'),
+(6, 'Shampoo C', '8.000', 15, 9, '10.000', '2023-07-25 17:00:00'),
+(7, 'Sabun Mandi D', '9.000', 16, 10, '11.000', '2023-07-25 17:00:00'),
+(8, 'Shampoo D', '10.000', 17, 11, '12.000', '2023-07-25 17:00:00'),
+(9, 'Sabun Mandi E', '11.000', 18, 12, '13.000', '2023-07-25 17:00:00'),
+(10, 'Shampoo E', '12.000', 19, 13, '14.000', '2023-07-25 17:00:00'),
+(11, 'Sabun Mandi F', '13.000', 20, 14, '15.000', '2023-07-25 17:00:00'),
+(12, 'Shampoo F', '14.000', 21, 15, '16.000', '2023-07-25 17:00:00');
 
 --
 -- Indexes for dumped tables
@@ -153,19 +150,19 @@ ALTER TABLE `stok`
 -- AUTO_INCREMENT untuk tabel `keluar`
 --
 ALTER TABLE `keluar`
-  MODIFY `idkeluar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idkeluar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `masuk`
 --
 ALTER TABLE `masuk`
-  MODIFY `idmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `idmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT untuk tabel `stok`
 --
 ALTER TABLE `stok`
-  MODIFY `idbarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idbarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
