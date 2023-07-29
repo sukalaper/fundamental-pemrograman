@@ -40,8 +40,8 @@
       history.go(-1);
     }
     Swal.fire({
-      title: 'Kesalahan di sisi user',
-      html: 'Harga jual tidak boleh lebih rendah dari harga modal.',
+      title: 'Kesalahan di sisi user!',
+      html: 'Harga jual tidak boleh lebih rendah dari harga modal',
       icon: 'error',
       confirmButtonText: 'Kembali'
     }).then((result) => {
