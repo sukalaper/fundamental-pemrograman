@@ -59,6 +59,7 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 
 - [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya? 
 - [ ] Penambahan beberapa fitur pada barang masuk.
+  - [ ] Penambahan hapus barang pada barang masuk, dalam pengerjaan.   
 - [ ] Penambahan beberapa fitur pada barang keluar.
 - [ ] Penambahan notifikasi jika stok menipis.
 - [ ] Penambahan notifikasi jika barang keluar melebihi stok barang yang ada.
