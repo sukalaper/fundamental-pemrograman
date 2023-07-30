@@ -72,7 +72,7 @@ def get_color_name(hue, sat, val):
     elif 315 <= hue < 345:
         return "Ungu"
     else:
-        return "Red"
+        return "Merah"
 
 hue_value = 0
 
