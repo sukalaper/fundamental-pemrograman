@@ -26,9 +26,6 @@ SOFTWARE
 // Untuk debugging
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-if (mysqli_connect_errno()) {
-  die("Koneksi database gagal: " . mysqli_connect_error());
-}
 // Sesi 
 session_start();
 // Koneksi ke database
@@ -130,13 +127,25 @@ if (isset($_POST['addnewbarang'])) {
   }
   if(isset($_POST['hapusbarangmasuk'])){
     $idmasuk = $_POST['idbarang'];
-    $hapus = mysqli_query($conn,"DELETE FROM stok WHERE idbarang='$idbarang'");
-    if($hapus){
+    $idmasuk = $_POST['idmasuk'];
+    $barangnya = $_POST['barangnya'];
+    $hapus_masuk = mysqli_query($conn,"DELETE FROM masuk WHERE idmasuk='$idmasuk'");
+  if ($hapus_masuk) {
+    $result_ambil_data_stok = mysqli_query($conn, "SELECT jumlahbarang FROM stok WHERE idbarang='$barangnya'");
+    $data_stok = mysqli_fetch_assoc($result_ambil_data_stok);
+    $jumlah_barang_sekarang = $data_stok['jumlahbarang'];
+    $result_tambah_stok_sekarang = $jumlah_barang_sekarang - $_POST['qty'];
+    $result_update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$result_tambah_stok_sekarang' WHERE idbarang='$barangnya'");
+    if ($result_update_stok) {
       header('location: barang-masuk.php');
     } else {
-      header('location: barang-keluar.php');
+      echo 'Gagal mengupdate stok!';
     }
+  } else {
+    echo 'Gagal menghapus data barang masuk!';
   }
+}
+
 // Mengubah Data Barang Masuk
 /*
   if(isset($_POST['updatebarangmasuk'])){
