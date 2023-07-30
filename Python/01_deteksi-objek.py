@@ -20,28 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE
 
-# The MIT License (MIT)
-#
-# Copyright (c) 2023 Anggiramadyansyah
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE
-
 import cv2
 from tabulate import tabulate
 
@@ -121,10 +99,16 @@ while True:
 cap1.release()
 cv2.destroyAllWindows()
 
+# NO IDE JUST IDLE! 
+# POKOKNYA PYTHON KEK PLER KWKWKW.
+
+output_text = ""
 if len(detected_objects) > 0:
-    print("\nHasil Deteksi Objek:")
+    output_text += "\nHasil Deteksi Objek:"
     table_headers = ["No.", "Warna", "Toleransi (H, S, V)", "Objek Terdeteksi", "Area Terdeteksi (%)", "Jarak terdeteksi (m3)"]
     table_data = [[i+1, get_color_name(data[1], data[2], data[3]), (data[1], data[2], data[3]), data[4], data[5], data[4]*data[5]] for i, data in enumerate(detected_objects)]
-    print(tabulate(table_data, headers=table_headers, tablefmt="grid"))
+    output_text += "\n" + tabulate(table_data, headers=table_headers, tablefmt="grid")
 else:
-    print("\nKesalahan. Tidak ada hasil deteksi objek!")
+    output_text += "\nKesalahan. Tidak ada hasil deteksi objek!"
+
+print(output_text)
