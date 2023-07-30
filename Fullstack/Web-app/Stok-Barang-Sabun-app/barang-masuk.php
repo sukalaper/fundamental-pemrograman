@@ -200,6 +200,7 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
   $idbarang = $data['idbarang'];
   $idmasuk = $data['idmasuk'];
   $namabarang = $data['namabarang'];
+  $satuanberat = $data['satuanberat'];
   $tanggal = $data['tanggal'];
   $qty = $data['qty'];
   ?>
@@ -212,7 +213,7 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
         </div>
         <form method="post">
           <div class="modal-body">
-            <input type="hidden" name="idbarang" value="<?php echo $idmasuk; ?>">
+            <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
             <input type="text" name="namabarang" value="<?php echo $namabarang; ?>" class="form-control mb-3" required>
             <input type="number" name="qty" value="<?php echo $qty; ?>" placeholder="Jumlah Barang" class="form-control mb-3" required>
             <input type="hidden" name="idmasuk" value="<?php echo $idmasuk; ?>">
@@ -241,5 +242,5 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
     </div>
   </div>
 <?php 
-  };
+  }
 ?>
