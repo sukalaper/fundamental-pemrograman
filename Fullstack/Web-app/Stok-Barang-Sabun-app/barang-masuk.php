@@ -105,7 +105,7 @@ require 'cek.php';
                 <thead>
                   <tr>
                     <th>Tanggal</th>
-                    <th>ID Barang</th>
+                    <!-- <th>ID Barang</th> -->
                     <th>Nama Barang</th>
                     <th>Jumlah Barang</th>
                     <th>Aksi</th>
@@ -123,12 +123,16 @@ require 'cek.php';
                     ?>
                     <tr>
                       <td><?php echo $tanggal; ?></td>
-                      <td><?php echo $idbarang; ?></td>
+                      <!-- <td><?php echo $idbarang; ?></td> -->
                       <td><?php echo $namabarang; ?></td>
                       <td><?php echo $qty; ?></td>
                       <td>
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?= $idbarang; ?>">
                           <i class="fas fa-edit"></i>
+                        </button>
+                        <input type="hidden" name="barangdihapus" value="<?=$idbarang;?>">
+                        <button type="button" class="btn btn-danger ms-2" data-bs-toggle="modal" data-bs-target="#delete<?= $idbarang; ?>">
+                          <i class="fas fa-trash"></i>
                         </button>
                       </td>  
                     </tr>
@@ -180,7 +184,7 @@ require 'cek.php';
               $idbarangnya = $fetcharray['idbarang'];
               $satuanberat = $fetcharray['satuanberat'];
               ?>
-              <option value="<?php echo $idbarangnya; ?>"> <?php echo $barangnya; ?> <?php echo $satuanberat . 'g'; ?></option>
+              <option value="<?php echo $idbarangnya; ?>"> <?php echo $barangnya; ?> <?php echo $satuanberat; ?></option>
             <?php } ?>
           </select>
           <input type="number" name="qty" placeholder="Jumlah Barang" class="form-control mb-3" required>
@@ -208,7 +212,7 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
         </div>
         <form method="post">
           <div class="modal-body">
-            <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
+            <input type="hidden" name="idbarang" value="<?php echo $idmasuk; ?>">
             <input type="text" name="namabarang" value="<?php echo $namabarang; ?>" class="form-control mb-3" required>
             <input type="number" name="qty" value="<?php echo $qty; ?>" placeholder="Jumlah Barang" class="form-control mb-3" required>
             <input type="hidden" name="idmasuk" value="<?php echo $idmasuk; ?>">
@@ -227,8 +231,8 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
         </div>
         <form method="post">
           <div class="modal-body">
-            Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?>?
             <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
+            Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?> <?=$satuanberat;?>?
             <input type="hidden" name="kty" value="<?php echo $qty; ?>">
             <button type="submit" class="btn btn-danger col-12 mt-3" name="hapusbarangmasuk">Hapus</button>
           </div>
@@ -236,4 +240,6 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
       </div>
     </div>
   </div>
-<?php } ?>
+<?php 
+  };
+?>
