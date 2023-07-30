@@ -42,22 +42,33 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 
 
 ### Fitur Tersedia
-- Tambah Barang
-  - Nama barang yang di input Mis, "rinso cair" akan dikonversi menjadi "Rinso Cair" untuk menghindari duplikasi [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/function.php#L35)
-  - Penggabungan pada satuan berat _(g)_ dan satuan volume _(mL)_ [lihat disini.](https://www.freedomsiana.id/1-gram-berapa-ml-mililiter-jawaban/)
-  - Penambahan fitur harga modal dan harga jual.
-    - Pada baris harga, jika harga jual < harga modal maka pengguna akan dialihkan ke halaman yang telah saya tentukan, [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/function.php#L41)
-    - Menjadikan baris harga modal dan harga jual menjadi RegEx agar dapat di klik secara manual, [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/index.php#L226C63-L226C86)
--  Edit Barang
+- Pada halaman `index.php`
+  - Tambah Barang Baru
+    - Nama barang yang di input Mis, "rinso cair" akan dikonversi menjadi "Rinso Cair" untuk menghindari duplikasi [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/function.php#L35)
+    - Penggabungan pada satuan berat _(g)_ dan satuan volume _(mL)_ [lihat disini.](https://www.freedomsiana.id/1-gram-berapa-ml-mililiter-jawaban/)
     - Penambahan fitur harga modal dan harga jual.
     - Pada baris harga, jika harga jual < harga modal maka pengguna akan dialihkan ke halaman yang telah saya tentukan, [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/function.php#L41)
     - Menjadikan baris harga modal dan harga jual menjadi RegEx agar dapat di klik secara manual, [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/index.php#L226C63-L226C86)
-- Hapus Barang
+  -  Edit Barang 
+      - Penambahan fitur harga modal dan harga jual.
+      - Pada baris harga, jika harga jual < harga modal maka pengguna akan dialihkan ke halaman yang telah saya tentukan, [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/function.php#L41)
+      - Menjadikan baris harga modal dan harga jual menjadi RegEx agar dapat di klik secara manual, [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/index.php#L226C63-L226C86)
+  - Hapus Barang
 
+- Pada halaman `barang-masuk.php`
+  - Tambah Barang Baru
+    - Nama barang akan terdeteksi dengan satuan berat yang telah di input untuk menghindari duplikasi [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8e6622261d38a9d843c9385cebfd8ad8180b9b2b/Fullstack/Web-app/Stok-Barang-Sabun-app/barang-masuk.php#L187)
+  - Edit Barang
+  - Hapus Barang, dalam pengerjaan.
+
+- Pada halaman `barang-keluar.php`
+  > **Note**: Tabel tidak dirender dengan baik pada halaman ini, perbaikan segera dilakukan.
+  - Tambah Barang Keluar
 
 ### Fitur Tahap Pengerjaan
 
-- [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya? 
+- [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya?
+- [ ] Penambahan fitur edit jumlah barang pada halaman awal.
 - [ ] Penambahan beberapa fitur pada barang masuk.
   - [ ] Penambahan hapus barang pada barang masuk, dalam pengerjaan.   
 - [ ] Penambahan beberapa fitur pada barang keluar.
