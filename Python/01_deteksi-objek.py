@@ -43,27 +43,26 @@
 # SOFTWARE
 
 import cv2
-from tabulate import tabulate
 
 def on_hue_change(value):
     global hue_value
     hue_value = value
 
 def get_color_name(hue, sat, val):
-    if 0 <= hue < 30 or 330 <= hue <= 359:
+    if 0 <= hue < 15 or 345 <= hue <= 360:
         return "Merah"
-    elif 30 <= hue < 60:
-        return "Orange"
-    elif 60 <= hue < 90:
-        return "Kuning"
-    elif 90 <= hue < 150:
-        return "Hijau"
-    elif 150 <= hue < 270:
+    elif 15 <= hue < 45:
         return "Biru"
-    elif 270 <= hue < 330:
-        return "Ungu"
-    elif 300 <= hue < 330:
+    elif 45 <= hue < 75:
+        return "Hijau"
+    elif 75 <= hue < 105:
         return "Pink"
+    elif 105 <= hue < 135:
+        return "Ungu"
+    elif 135 <= hue < 165:
+        return "Coklat"
+    elif 165 <= hue < 195:
+        return "Kuning"
     else:
         return "Tidak Dikenal"
 
@@ -72,11 +71,11 @@ hue_value = 0
 cap1 = cv2.VideoCapture(0)
 
 if not cap1.isOpened():
-    print("Kesalahan. Tidak dapat membuka kamera!")
+    print("Tidak dapat membuka kamera!")
     exit()
 
-cap1.set(cv2.CAP_PROP_FRAME_WIDTH, 300)
-cap1.set(cv2.CAP_PROP_FRAME_HEIGHT, 200)
+cap1.set(cv2.CAP_PROP_FRAME_WIDTH, 500)
+cap1.set(cv2.CAP_PROP_FRAME_HEIGHT, 320)
 
 cv2.namedWindow('Hasil Deteksi Objek 1')
 cv2.createTrackbar('HUE', 'Hasil Deteksi Objek 1', hue_value, 360, on_hue_change)
@@ -87,7 +86,7 @@ while True:
     ret1, frame1 = cap1.read()
 
     if not ret1:
-        print("Kesalahan. Tidak dapat membaca frame dari kamera!")
+        print("Tidak dapat membaca frame dari kamera")
         break
 
     hsv_image1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
@@ -126,7 +125,7 @@ if len(detected_objects) > 0:
         f.write("Hasil Deteksi Objek:\n")
         table_headers = ["No.", "Warna", "Toleransi (H, S, V)", "Objek Terdeteksi", "Area Terdeteksi (%)", "Jarak terdeteksi (m3)"]
         table_data = [[i+1, get_color_name(data[1], data[2], data[3]), (data[1], data[2], data[3]), data[4], data[5], data[4]*data[5]] for i, data in enumerate(detected_objects)]
-        f.write(tabulate(table_data, headers=table_headers, tablefmt="grid"))
-        f.write("\n")
+        for row in table_data:
+            f.write("\t".join(str(col) for col in row) + "\n")
 else:
-    print("\nKesalahan. Tidak ada hasil deteksi objek!")
+    print("\nTidak ada hasil deteksi objek.")
