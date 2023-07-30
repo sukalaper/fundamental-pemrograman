@@ -41,7 +41,7 @@ Pengguna dapat mengakses fitur ini dari halaman utama dengan mengklik tombol "Ed
 Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna dapat mengakses fitur ini melalui halaman utama dengan mengklik tombol "Hapus" pada produk yang ingin dihapus. Setelah konfirmasi, produk akan dihapus dari database.
 
 
-### Fitur Pada Sisi Backend
+### Fitur Tersedia
 - Tambah Barang
   - Nama barang yang di input Mis, "rinso cair" akan dikonversi menjadi "Rinso Cair" untuk menghindari duplikasi [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8a113857352cbbac5723156122a765a6b7970044/Fullstack/Web-app/Stok-Barang-Sabun-app/function.php#L35)
   - Penggabungan pada satuan berat _(g)_ dan satuan volume _(mL)_ [lihat disini.](https://www.freedomsiana.id/1-gram-berapa-ml-mililiter-jawaban/)
@@ -55,7 +55,7 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 - Hapus Barang
 
 
-## TODO
+### Fitur Tahap Pengerjaan
 
 - [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya? 
 - [ ] Penambahan beberapa fitur pada barang masuk.
@@ -68,5 +68,5 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 - [ ] Dll
 
 
-## Catatan Kecil
+### Catatan Kecil
 Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat.
