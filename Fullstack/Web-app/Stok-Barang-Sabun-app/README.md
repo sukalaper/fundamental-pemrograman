@@ -62,7 +62,7 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
   - Hapus Barang, dalam pengerjaan.
 
 - Pada halaman `barang-keluar.php`
-  > **Note**: Tabel tidak dirender dengan baik pada halaman ini, perbaikan segera dilakukan.
+  > **Peringatan**: Tabel tidak dirender dengan baik pada halaman ini, perbaikan segera dilakukan.
   - Tambah Barang Keluar
 
 ### Fitur Tahap Pengerjaan
