@@ -1,7 +1,7 @@
 ## Dokumentasi Proyek Toko Sabun Berbasis Website
 
 
-> **Note**: Pembangunan pada proyek ini akan terus dilakukan.
+> **Note**: Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat. Pembaruan mungkin akan terus dilakukan.
 
 
 ### Deskripsi Proyek
@@ -77,7 +77,3 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 - [ ] Ekspor file rekapitulasi penjualan dan laba dalam format ```.pdf``` atau ```.xlsx``` agar proses manajemen lebih mudah.
 - [ ] Perubahan beberapa warna dan tampilan
 - [ ] Dll
-
-
-### Catatan Kecil
-Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat.
