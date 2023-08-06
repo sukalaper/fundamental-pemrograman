@@ -93,7 +93,9 @@ require 'cek.php';
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4">
-          <h1 class="mt-4">Barang Masuk</h1>
+          <div class="container text-center mt-4">
+            <h1 class="animated-text">Kelola Barang Masuk</h1>
+          </div> 
           <div class="card mb-4">
             <div class="card-header">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="float: right;">
@@ -104,10 +106,10 @@ require 'cek.php';
               <table id="datatablesSimple">
                 <thead>
                   <tr>
-                    <th>Tanggal</th>
-                    <!-- <th>ID Barang</th> -->
-                    <th>Nama Barang</th>
-                    <th>Jumlah Barang</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Nama Barang Masuk</th>
+                    <th>Satuan Berat (g) (mL)</th>
+                    <th>Jumlah Barang Masuk</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -118,13 +120,14 @@ require 'cek.php';
                     $idbarang = $data['idbarang'];
                     $idmasuk = $data['idmasuk'];
                     $namabarang = $data['namabarang'];
+                    $satuanberat = $data['satuanberat'];
                     $tanggal = $data['tanggal'];
                     $qty = $data['qty'];
                     ?>
                     <tr>
                       <td><?php echo $tanggal; ?></td>
-                      <!-- <td><?php echo $idbarang; ?></td> -->
                       <td><?php echo $namabarang; ?></td>
+                      <td><?php echo $satuanberat; ?></td>
                       <td><?php echo $qty; ?></td>
                       <td>
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?= $idbarang; ?>">
@@ -214,7 +217,8 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
         <form method="post">
           <div class="modal-body">
             <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
-            <input type="text" name="namabarang" value="<?php echo $namabarang; ?>" class="form-control mb-3" required>
+            <input type="text" name="namabarang" value="<?php echo $namabarang; ?>" class="form-control mb-3" readonly>
+            <input type="number" name="satuanberat" value="<?php echo $satuanberat; ?>" class="form-control mb-3" readonly>
             <input type="number" name="qty" value="<?php echo $qty; ?>" placeholder="Jumlah Barang" class="form-control mb-3" required>
             <input type="hidden" name="idmasuk" value="<?php echo $idmasuk; ?>">
             <button type="submit" class="btn btn-primary" name="updatebarangmasuk">Submit</button>
@@ -232,6 +236,7 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
         </div>
         <form method="post">
           <div class="modal-body">
+            <input type="hidden" name="idmasuk" value="<?php echo $idmasuk; ?>">
             <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
             Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?> <?=$satuanberat;?>?
             <input type="hidden" name="kty" value="<?php echo $qty; ?>">
