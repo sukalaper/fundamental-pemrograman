@@ -59,7 +59,7 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
   - Tambah Barang Baru
     - Nama barang akan terdeteksi dengan satuan berat yang telah di input untuk menghindari duplikasi [lihat disini.](https://github.com/sukalaper/fundamental-pemrograman/blob/8e6622261d38a9d843c9385cebfd8ad8180b9b2b/Fullstack/Web-app/Stok-Barang-Sabun-app/barang-masuk.php#L187)
   - Edit Barang
-  - Hapus Barang, dalam pengerjaan.
+  - Hapus Barang Masuk
 
 - Pada halaman `barang-keluar.php`
   > **Peringatan**: Tabel tidak dirender dengan baik pada halaman ini, perbaikan segera dilakukan.
@@ -68,9 +68,9 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 ### Fitur Tahap Pengerjaan
 
 - [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya?
-- [ ] Penambahan fitur edit jumlah barang pada halaman awal.
-- [ ] Penambahan beberapa fitur pada barang masuk.
-  - [ ] Penambahan hapus barang pada barang masuk, dalam pengerjaan.   
+- [x] Penambahan fitur edit jumlah barang pada halaman awal.
+- [x] Penambahan beberapa fitur pada barang masuk.
+  - [x] Penambahan hapus barang pada barang masuk, dalam pengerjaan.   
 - [ ] Penambahan beberapa fitur pada barang keluar.
 - [ ] Penambahan notifikasi jika stok menipis.
 - [ ] Penambahan notifikasi jika barang keluar melebihi stok barang yang ada.
