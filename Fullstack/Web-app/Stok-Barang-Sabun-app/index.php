@@ -57,6 +57,10 @@ require 'cek.php';
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Barang Keluar
             </a>
+            <a class="nav-link" href="Rekapitulasi.php">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+              Rekapitulasi
+            </a> 
             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
@@ -94,7 +98,7 @@ require 'cek.php';
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4">
-          <div class="container text-center mt-4">
+          <div class="text-left mt-4">
             <h1 class="animated-text">Toko Sabun Sukalaper</h1>
           </div>
           <div class="card mb-4">
