@@ -93,7 +93,7 @@ require 'cek.php';
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4">
-          <div class="container text-center mt-4">
+          <div class="text-left mt-4">
             <h1 class="animated-text">Kelola Barang Masuk</h1>
           </div> 
           <div class="card mb-4">
@@ -249,3 +249,4 @@ while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
 <?php 
   }
 ?>
+</html>
