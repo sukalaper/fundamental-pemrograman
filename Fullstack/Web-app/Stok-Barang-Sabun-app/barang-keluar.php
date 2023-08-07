@@ -93,11 +93,13 @@ require 'cek.php';
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4">
-          <h1 class="mt-4">Barang Keluar</h1>
+          <div class="text-left mt-4">
+            <h1 class="animated-text">Kelola Barang Keluar</h1>
+          </div> 
           <div class="card mb-4">
             <div class="card-header">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="float: right;">
-                Tambah Barang
+                <span class="fas fa-plus"></span> Tambah Barang Keluar
               </button>
             </div>
             <div class="card-body">
@@ -105,9 +107,10 @@ require 'cek.php';
                 <thead>
                   <tr>
                     <th>ID Barang</th>
-                    <th>Nama Barang</th>
                     <th>Tanggal</th>
+                    <th>Nama Barang</th>
                     <th>Jumlah Barang</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -115,19 +118,26 @@ require 'cek.php';
                   $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM keluar K, stok S WHERE S.idbarang = K.idbarang");
                   while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
                     $idbarang = $data['idbarang'];
-                    $namabarang = $data['namabarang'];
                     $tanggal = $data['tanggal'];
+                    $namabarang = $data['namabarang'];
                     $qty = $data['qty'];
                     ?>
                     <tr>
-                      <td><?=$idbarang;?></td>
-                      <td><?=$namabarang;?></td>
-                      <td><?=$tanggal;?></td>
-                      <td><?=$qty;?></td>
+                      <td><?php echo $idbarang; ?></td>
+                      <td><?php echo $tanggal ;?></td>
+                      <td><?php echo $namabarang ;?></td>
+                      <td><?php echo $qty ;?></td>
+                      <td> 
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?= $idbarang; ?>">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <input type="hidden" name="barangdihapus" value="<?=$idbarang;?>">
+                        <button type="button" class="btn btn-danger ms-2" data-bs-toggle="modal" data-bs-target="#delete<?= $idbarang; ?>">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td> 
                     </tr>
-                    <?php
-                  };
-                  ?>
+                    <?php }?>
                 </tbody>
               </table>
             </div>
@@ -171,11 +181,10 @@ require 'cek.php';
               while($fetcharray = mysqli_fetch_array($ambildata)){
                 $barangnya = $fetcharray['namabarang'];
                 $idbarangnya = $fetcharray['idbarang'];
+                $satuanberat = $fetcharray['satuanberat'];
                 ?>
-                <option value="<?=$idbarangnya;?>"><?=$barangnya;?></option>
-                <?php
-              }
-              ?>
+                  <option value="<?php echo $idbarangnya ;?>"> <?php echo $barangnya ;?> <?php echo $satuanberat; ?></option>
+                <?php } ?>
             </select>
             <input type="number" name="qty" placeholder="Jumlah Barang" class="form-control mb-3" required>
             <button type="submit" class="btn btn-primary" name="barangkeluar">Submit</button>
@@ -184,4 +193,56 @@ require 'cek.php';
       </div>
     </div>
   </div>
+<?php
+$result_ambil_semua_data_stok = mysqli_query($conn, "SELECT * FROM keluar M, stok S WHERE S.idbarang = M.idbarang");
+while ($data = mysqli_fetch_array($result_ambil_semua_data_stok)) {
+  $idbarang = $data['idbarang'];
+  $idkeluar = $data['idkeluar'];
+  $namabarang = $data['namabarang'];
+  $satuanberat = $data['satuanberat'];
+  $tanggal = $data['tanggal'];
+  $qty = $data['qty'];
+  ?>
+  <div class="modal fade" id="edit<?=$idbarang;?>">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Barang</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form method="post">
+          <div class="modal-body">
+            <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
+            <input type="text" name="namabarang" value="<?php echo $namabarang; ?>" class="form-control mb-3" readonly>
+           <input type="number" name="satuanberat" value="<?php echo $satuanberat; ?>" class="form-control mb-3" readonly>
+           <input type="number" name="qty" value="<?php echo $qty; ?>" placeholder="Jumlah Barang" class="form-control mb-3" required>
+           <input type="hidden" name="idkeluar" value="<?php echo $idkeluar; ?>">
+           <button type="submit" class="btn btn-primary" name="updatebarangkeluar">Submit</button>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
+ <div class="modal fade" id="delete<?=$idbarang;?>">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Hapus Barang?</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="post">
+        <div class="modal-body">
+          <input type="hidden" name="idkeluar" value="<?php echo $idkeluar; ?>">
+          <input type="hidden" name="idbarang" value="<?php echo $idbarang; ?>">
+          Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?> <?=$satuanberat;?>?
+          <input type="hidden" name="kty" value="<?php echo $qty; ?>">
+          <button type="submit" class="btn btn-danger col-12 mt-3" name="hapusbarangkeluar">Hapus</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<?php 
+  }
+?>
 </html>
