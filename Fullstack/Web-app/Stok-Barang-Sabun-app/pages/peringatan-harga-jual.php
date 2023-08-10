@@ -40,8 +40,8 @@
       history.go(-1);
     }
     Swal.fire({
-      title: 'Kesalahan di sisi user!',
-      html: 'Username atau password yang Anda masukan salah',
+      title: 'Kesalahan di sisi user',
+      html: 'Harga jual tidak boleh lebih rendah dari harga modal.',
       icon: 'error',
       confirmButtonText: 'Kembali'
     }).then((result) => {
@@ -52,3 +52,4 @@
   </script>
 </body>
 </html>
+

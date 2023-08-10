@@ -23,10 +23,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE
 */
 
+// Untuk debugging
 ini_set('display_errors', 1);
-error_reporting(E_ALL); 
+error_reporting(E_ALL);
+// Sesi 
 session_start();
 
+// Koneksi ke database
 $conn = mysqli_connect("localhost", "root", "", "stok-barang");
 
 if(isset($_POST['addnewbarang'])){
@@ -36,12 +39,10 @@ if(isset($_POST['addnewbarang'])){
   $satuanberat = mysqli_real_escape_string($conn, $_POST['satuanberat']);
   $jumlahbarang = mysqli_real_escape_string($conn, $_POST['jumlahbarang']);
   $hargajual = mysqli_real_escape_string($conn, $_POST['hargajual']);
-
   $result_check_barang = mysqli_query($conn, "SELECT idbarang, jumlahbarang FROM stok WHERE LOWER(namabarang) = LOWER('$namabarang') AND LOWER(satuanberat) = LOWER('$satuanberat')");
-
   if($hargajual < $hargamodal){
-    header('location:peringatan-harga-jual.php');
-    exit;
+    header('location:layouts/peringatan-harga-jual.php');
+    exit; // Berhenti eksekusi skrip setelah mengalihkan ke halaman "peringatan-harga-jual.php"
   }
 
   if(mysqli_num_rows($result_check_barang) > 0){
@@ -64,6 +65,7 @@ if(isset($_POST['addnewbarang'])){
     }
   }
 
+// Menambah barang masuk
 if(isset($_POST['barangmasuk'])){
   $barangnya = $_POST['barangnya'];
   $qty = $_POST['qty'];
@@ -83,6 +85,7 @@ if(isset($_POST['barangmasuk'])){
   }
 }
 
+// Menambah Barang Keluar
 if(isset($_POST['barangkeluar'])){
   $barangnya = $_POST['barangnya'];
   $qty = $_POST['qty'];
@@ -102,6 +105,7 @@ if(isset($_POST['barangkeluar'])){
   }
 }
 
+// Update Info Barang
 if(isset($_POST['updatebarang'])){
   $idbarang = $_POST['idbarang'];
   $namabarang = $_POST['namabarang'];
@@ -124,6 +128,7 @@ if(isset($_POST['updatebarang'])){
   }
 }
 
+// Update Hapus Barang
 if(isset($_POST['hapusbarang'])){
   $idbarang = $_POST['idbarang'];
 
