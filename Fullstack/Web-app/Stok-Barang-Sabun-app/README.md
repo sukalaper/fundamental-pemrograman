@@ -72,7 +72,7 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
     
 ### Fitur Tahap Pengerjaan
 
-- [ ] Refaktorisasi folder agar lebih terstruktur.
+- [x] Refaktorisasi folder agar lebih terstruktur (dalam pengerjaan saat ini)
 - [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya?
 - [ ] Penambahan beberapa fitur pada barang keluar.
 - [ ] Penambahan notifikasi jika stok menipis.
