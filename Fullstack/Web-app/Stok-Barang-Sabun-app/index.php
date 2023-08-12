@@ -1,6 +1,6 @@
 <?php 
-require './kelola_stok/function.php';
-require './kelola_stok/cek.php';
+require 'kelola_stok/function.php';
+require 'kelola_stok/cek.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +13,12 @@ require './kelola_stok/cek.php';
   <meta name="author" content="" />
   <title>Administrator</title>
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-  <link href="./assets/css/styles.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand ps-3" href="./kelola_stok/index.php">Sukalaper</a>
+    <a class="navbar-brand ps-3" href="index.php">Sukalaper</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
       <div class="input-group">
@@ -34,7 +34,7 @@ require './kelola_stok/cek.php';
           <li><a class="dropdown-item" href="#!">Settings</a></li>
           <li><a class="dropdown-item" href="#!">Activity Log</a></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><a class="dropdown-item" href="./pages/auth/logout.php">Logout</a></li>
+          <li><a class="dropdown-item" href="pages/auth/logout.php">Logout</a></li>
         </ul>
       </li>
     </ul>
@@ -45,15 +45,15 @@ require './kelola_stok/cek.php';
         <div class="sb-sidenav-menu">
           <div class="nav">
             <div class="sb-sidenav-menu-heading">Kelola Barang</div>
-            <a class="nav-link" href="./kelola_stok/index.php">
+            <a class="nav-link" href="index.php">
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Stok Barang
             </a>
-            <a class="nav-link" href="./kelola_stok/barang-masuk.php">
+            <a class="nav-link" href="kelola_stok/barang-masuk.php">
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Barang Masuk
             </a>
-            <a class="nav-link" href="./kelola_stok/barang-keluar.php">
+            <a class="nav-link" href="kelola_stok/barang-keluar.php">
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Barang Keluar
             </a>
@@ -69,9 +69,10 @@ require './kelola_stok/cek.php';
                 </a>
                 <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                   <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="./pages/logout.php">Login</a>
-                    <a class="nav-link" href="./pages/register.html">Register</a>
-                    <a class="nav-link" href="./pages/password.html">Forgot Password</a>
+                    <a class="nav-link" href="pages/auth/login.php">Login</a>
+                    <a class="nav-link" href="pages/auth/logout.php">Logout</a>
+                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="password.html">Forgot Password</a>
                   </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
@@ -80,9 +81,9 @@ require './kelola_stok/cek.php';
                 </a>
                 <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                   <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="./pages/401.html">401 Page</a>
-                    <a class="nav-link" href="./pages/404.html">404 Page</a>
-                    <a class="nav-link" href="./pages/500.html">500 Page</a>
+                    <a class="nav-link" href="pages/401.html">401 Page</a>
+                    <a class="nav-link" href="pages/404.html">404 Page</a>
+                    <a class="nav-link" href="pages/500.html">500 Page</a>
                   </nav>
                 </div>
               </nav>
@@ -213,12 +214,12 @@ require './kelola_stok/cek.php';
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="./assets/js/scripts.js"></script>
+  <script src="assets/js/scripts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-  <script src="./assets/demo/chart-area-demo.js"></script>
-  <script src="./assets/demo/chart-bar-demo.js"></script>
+  <script src="assets/demo/chart-area-demo.js"></script>
+  <script src="assets/demo/chart-bar-demo.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-  <script src="./assets/js/datatables-simple-demo.js"></script>
+  <script src="assets/js/datatables-simple-demo.js"></script>
 </body>
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
