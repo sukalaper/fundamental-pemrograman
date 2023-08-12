@@ -15,25 +15,21 @@ Aplikasi ini bertujuan untuk mengelola produk-produk sabun yang dijual di toko s
 ### Fitur Halaman
 
 - Halaman Utama
-  ![index edited](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/61262a0c-140b-426e-821a-87eabfbbcc92)
 
 Halaman utama adalah tampilan awal aplikasi yang menampilkan daftar produk sabun yang tersedia di toko. Setiap produk akan menampilkan informasi singkat tentang produk tersebut, seperti nama, harga, satuan berat dan jumlah stok.
 
 
 - Menambah Produk Baru
-![tambah-barang edited](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/af0306c6-e909-4e30-9edf-7c742057aaf3)
 
 Fitur ini memungkinkan pengguna untuk menambahkan produk sabun baru ke dalam database. Pengguna harus mengisi formulir dengan informasi produk seperti nama, harga, satuan berat dan jumlah stok.
 
  
 - Melakukan Edit Produk
-![edit-barang edited](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/96107ec1-d20a-4e2d-b92a-144889bee961)
 
 Pengguna dapat mengakses fitur ini dari halaman utama dengan mengklik tombol "Edit" pada produk yang ingin diubah. Formulir pre-populasi akan muncul dengan informasi produk yang telah ada sebelumnya, dan pengguna dapat memperbarui informasi tersebut.
 
 
 - Menghapus Produk
-  ![hapus-barang edited](https://github.com/sukalaper/fundamental-pemrograman/assets/65320033/3fd6c42f-001c-4802-a56a-ee732a17be69)
 
 Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna dapat mengakses fitur ini melalui halaman utama dengan mengklik tombol "Hapus" pada produk yang ingin dihapus. Setelah konfirmasi, produk akan dihapus dari database.
 
