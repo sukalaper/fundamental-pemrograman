@@ -1,6 +1,6 @@
 <?php 
-require './../kelola_stok/function.php';
-require './../kelola_stok/cek.php';
+require 'function.php';
+require 'cek.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ require './../kelola_stok/cek.php';
   <meta name="author" content="" />
   <title>Barang Keluar</title>
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-  <link href="./../assets/css/styles.css" rel="stylesheet" />
+  <link href="../assets/css/styles.css" rel="stylesheet" />
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
@@ -44,15 +44,15 @@ require './../kelola_stok/cek.php';
         <div class="sb-sidenav-menu">
           <div class="nav">
             <div class="sb-sidenav-menu-heading">Administrator Page</div>
-            <a class="nav-link" href="./../index.php">
+            <a class="nav-link" href="../index.php">
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Stok Barang
             </a>
-            <a class="nav-link" href="./../barang-masuk.php">
+            <a class="nav-link" href="barang-masuk.php">
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Barang Masuk
             </a>
-            <a class="nav-link" href="./../barang-keluar.php">
+            <a class="nav-link" href="barang-keluar.php">
               <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
               Barang Keluar
             </a>
