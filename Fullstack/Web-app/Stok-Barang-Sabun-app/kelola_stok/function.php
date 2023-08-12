@@ -41,8 +41,8 @@ if(isset($_POST['addnewbarang'])){
   $hargajual = mysqli_real_escape_string($conn, $_POST['hargajual']);
   $result_check_barang = mysqli_query($conn, "SELECT idbarang, jumlahbarang FROM stok WHERE LOWER(namabarang) = LOWER('$namabarang') AND LOWER(satuanberat) = LOWER('$satuanberat')");
   if($hargajual < $hargamodal){
-    header('location:layouts/peringatan-harga-jual.php');
-    exit; // Berhenti eksekusi skrip setelah mengalihkan ke halaman "peringatan-harga-jual.php"
+    header('location:pages/peringatan-harga-jual.php');
+    exit; 
   }
 
   if(mysqli_num_rows($result_check_barang) > 0){
@@ -51,16 +51,16 @@ if(isset($_POST['addnewbarang'])){
     $new_quantity = $data_barang['jumlahbarang'] + $jumlahbarang;
     $result_update_quantity = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$new_quantity' WHERE idbarang='$idbarang'");
     if($result_update_quantity){
-      header('location:index.php?success=1');
+      header('location:./index.php');
     } else {
-      header('location:index.php?error=1');
+      header('location:./index.php');
     }
   } else {
       $result = mysqli_query($conn, "INSERT INTO stok (namabarang, hargamodal, satuanberat, jumlahbarang, hargajual) VALUES ('$namabarang', '$hargamodal', '$satuanberat','$jumlahbarang', '$hargajual')");
       if($result){
-        header('location:index.php?success=1');
+        header('location:./index.php');
       } else {
-        header('location:index.php?error=1');
+        header('location:./index.php');
       }
     }
   }
@@ -117,14 +117,14 @@ if(isset($_POST['updatebarang'])){
   $update = mysqli_query($conn, "UPDATE stok SET idbarang='$idbarang', namabarang='$namabarang', hargamodal='$hargamodal', satuanberat='$satuanberat', hargajual='$hargajual', jumlahbarang='$jumlahbarang' WHERE idbarang ='$idbarang'");
 
   if($hargajual < $hargamodal){
-    header('location:peringatan-harga-jual.php');
+    header('location:../pages/peringatan-harga-jual.php');
     exit;
   }
 
   if($update){
-    header('location:index.php');
+    header('location:../index.php');
   } else {
-    header('location:index.php');
+    header('location:../index.php');
   }
 }
 
@@ -135,9 +135,9 @@ if(isset($_POST['hapusbarang'])){
   $hapus = mysqli_query($conn, "DELETE FROM stok WHERE idbarang='$idbarang'");
 
   if($hapus){
-    header('location:index.php');
+    header('location:../index.php');
   } else {
-    header('location:index.php');
+    header('location:../index.php');
   }
 }
 
@@ -153,7 +153,7 @@ if(isset($_POST['hapusbarangmasuk'])){
     $update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang = jumlahbarang - $qty WHERE idbarang='$idbarang'");
 
     if($hapus_masuk && $update_stok){
-      header('location: barang-masuk.php');
+      header('location:barang-masuk.php');
     } else {
       echo 'Gagal mengupdate stok!';
     }
