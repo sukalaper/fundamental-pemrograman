@@ -26,14 +26,10 @@ require 'kelola_stok/cek.php';
         <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
       </div>
     </form>
-    
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#!">Settings</a></li>
-          <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-          <li><hr class="dropdown-divider" /></li>
           <li><a class="dropdown-item" href="pages/auth/logout.php">Logout</a></li>
         </ul>
       </li>
@@ -116,8 +112,8 @@ require 'kelola_stok/cek.php';
                     <th>Nama Barang</th>
                     <th>Satuan Berat (g) (mL)</th>
                     <th>Harga Modal</th>
-                    <th>Jumlah Barang</th>
                     <th>Harga Jual</th>
+                    <th>Jumlah Barang</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -129,8 +125,8 @@ require 'kelola_stok/cek.php';
                       $namabarang = $data['namabarang'];
                       $satuanberat = $data['satuanberat'];
                       $hargamodal = $data['hargamodal'];
-                      $jumlahbarang = $data['jumlahbarang'];
                       $hargajual = $data['hargajual'];
+                      $jumlahbarang = $data['jumlahbarang'];
                       $idbarang = $data['idbarang'];
                   ?>
                   <tr>
@@ -138,8 +134,8 @@ require 'kelola_stok/cek.php';
                     <td><?=$namabarang;?></td>
                     <td><?=$satuanberat;?></td>
                     <td><?=$hargamodal;?></td>
-                    <td><?=$jumlahbarang;?></td>
                     <td><?=$hargajual;?></td>
+                    <td><?=$jumlahbarang;?></td>
                     <td>
                       <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?=$idbarang;?>">
                         <i class="fas fa-edit"></i>
@@ -164,9 +160,8 @@ require 'kelola_stok/cek.php';
                             <input type="number" name="hargamodal" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Modal (Rp)" class="form-control mb-0" required>
                             <p style="font-size: 1px; color: red;">*Jika harga barang adalah Rp1.000 isi kolom dengan angka 1</p>
                             <input type="number" name="satuanberat" placeholder="Satuan Berat" class="form-control mb-0" required>
-                            <p style="font-size: 1px; color: red;">*Secara matematis, satuan <em>Gram</em> dan <em>Mili</em> adalah ukuran yang sama</p>
+                            <p style="font-size: 1px; color: red;">*Secara matematis satuan <em>Gram</em> dan <em>Mili</em> adalah ukuran yang sama</p>
                             <input type="number" name="hargajual" step="0.001" pattern="\d+(\.\d{2})?" placeholder="Harga Jual (Rp)" class="form-control mb-3" required>
-                            <input type="number" name="jumlahbarang" placeholder="Jumlah Barang" value="<?=$jumlahbarang;?>" class="form-control mb-3" required>
                             <button type="submit" class="btn btn-primary" name="updatebarang">Submit</button>
                           </div>
                         </form>
@@ -183,7 +178,7 @@ require 'kelola_stok/cek.php';
                         <form method="post">
                           <div class="modal-body">
                             <input type="hidden" name="idbarang" value="<?=$idbarang;?>">
-                            Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?>?
+                            Apakah Anda Yakin Ingin Menghapus <?=$namabarang;?> <?=$satuanberat;?>g/mL?
                             <button type="submit" class="btn btn-danger col-12 mt-3" name="hapusbarang">Hapus</button>
                           </div>
                         </form>
@@ -203,11 +198,6 @@ require 'kelola_stok/cek.php';
         <div class="container-fluid px-4">
           <div class="d-flex align-items-center justify-content-between small">
             <div class="text-muted">Copyright &copy; Sukalaper 2022</div>
-            <div>
-              <a href="#">Privacy Policy</a>
-              &middot;
-              <a href="#">Terms &amp; Conditions</a>
-            </div>
           </div>
         </div>
       </footer>
