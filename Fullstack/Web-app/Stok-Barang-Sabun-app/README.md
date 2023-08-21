@@ -70,9 +70,8 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 
 - [x] Refaktorisasi folder agar lebih terstruktur (dalam pengerjaan saat ini)
 - [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya?
-- [ ] Penambahan beberapa fitur pada barang keluar.
-- [ ] Penambahan notifikasi jika stok menipis.
-- [ ] Penambahan notifikasi jika barang keluar melebihi stok barang yang ada.
+- [x] Penambahan beberapa fitur pada barang keluar.
+- [x] Penambahan notifikasi jika barang keluar melebihi stok barang yang ada.
 - [ ] Ekspor file rekapitulasi penjualan dan laba dalam format ```.pdf``` atau ```.xlsx``` agar proses manajemen lebih mudah.
 - [ ] Perubahan beberapa warna dan tampilan
 - [ ] Dll
