@@ -32,6 +32,7 @@ session_start();
 // Koneksi ke database
 $conn = mysqli_connect("localhost", "root", "", "stok-barang");
 
+// Tambah barang baru
 if(isset($_POST['addnewbarang'])){
   $namabarang = mysqli_real_escape_string($conn, $_POST['namabarang']);
   $namabarang = ucwords(strtolower($namabarang));
@@ -64,7 +65,7 @@ if(isset($_POST['addnewbarang'])){
   }
 }
 
-// Menambah barang masuk
+// Tambah barang masuk
 if(isset($_POST['barangmasuk'])){
   $barangnya = $_POST['barangnya'];
   $qty = $_POST['qty'];
@@ -75,30 +76,13 @@ if(isset($_POST['barangmasuk'])){
   $result_masuk = mysqli_query($conn, "INSERT INTO masuk (idbarang, qty) VALUES ('$barangnya','$qty')");
   $result_update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$result_tambah_stok_sekarang' WHERE idbarang='$barangnya'");
   if($result_masuk && $result_update_stok){
-    header('location:barang-masuk.php');
+    header('location:../pages/peringatan-tambah-barang-berhasil.php');
   } else {
     header('location:barang-masuk.php');
   }
 }
 
-// Menambah Barang Keluar
-if(isset($_POST['barangkeluar'])){
-  $barangnya = $_POST['barangnya'];
-  $qty = $_POST['qty'];
-  $result_cek_stok_sekarang = mysqli_query($conn, "SELECT * FROM stok WHERE idbarang='$barangnya'");
-  $result_ambil_data = mysqli_fetch_array($result_cek_stok_sekarang);
-  $result_stok_sekarang = $result_ambil_data['jumlahbarang'];
-  $result_tambah_stok_sekarang = $result_stok_sekarang - $qty;
-  $result_keluar = mysqli_query($conn, "INSERT INTO keluar (idbarang, qty) VALUES ('$barangnya','$qty')");
-  $result_update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$result_tambah_stok_sekarang' WHERE idbarang='$barangnya'");
-  if($result_keluar && $result_update_stok){
-    header('location:barang-keluar.php');
-  } else {
-    header('location:barang-keluar.php');
-  }
-}
-
-// Update Info Barang
+// Perbarui info barang 
 if(isset($_POST['updatebarang'])){
   $idbarang = $_POST['idbarang'];
   $namabarang = $_POST['namabarang'];
@@ -117,7 +101,7 @@ if(isset($_POST['updatebarang'])){
   }
 }
 
-// Update Hapus Barang
+// Perbarui saat barang dihapus
 if(isset($_POST['hapusbarang'])){
   $idbarang = $_POST['idbarang'];
   $hapus = mysqli_query($conn, "DELETE FROM stok WHERE idbarang='$idbarang'");
@@ -128,6 +112,7 @@ if(isset($_POST['hapusbarang'])){
   }
 }
 
+// Menghapus barang masuk
 if(isset($_POST['hapusbarangmasuk'])){
   $idmasuk = $_POST['idmasuk'];
   $idbarang = $_POST['idbarang'];
@@ -147,6 +132,7 @@ if(isset($_POST['hapusbarangmasuk'])){
   }
 }
 
+// Perbarui barang masuk
 if(isset($_POST['updatebarangmasuk'])){
   $idbarang = $_POST['idbarang'];
   $idmasuk = $_POST['idmasuk'];
@@ -169,17 +155,49 @@ if(isset($_POST['updatebarangmasuk'])){
   }
 }
 
-if(isset($_POST['hapusbarangkeluar'])){
-  $idkeluar = $_POST['idkeluar'];
+
+// Perbarui info barang 
+if(isset($_POST['updatebarang'])){
   $idbarang = $_POST['idbarang'];
-  $get_qty = mysqli_query($conn, "SELECT qty FROM keluar WHERE idkeluar='$idkeluar'");
+  $namabarang = $_POST['namabarang'];
+  $hargamodal = $_POST['hargamodal'];
+  $satuanberat = $_POST['satuanberat'];
+  $hargajual = $_POST['hargajual'];
+  if($hargajual < $hargamodal){
+    header('location:pages/peringatan-harga-jual.php');
+    exit;
+  }
+  $update = mysqli_query($conn, "UPDATE stok SET idbarang='$idbarang', namabarang='$namabarang', hargamodal='$hargamodal', satuanberat='$satuanberat', hargajual='$hargajual' WHERE idbarang ='$idbarang'");
+    if($update){
+    header('location:pages/peringatan-update-barang.php');
+  } else {
+    header('location:pages/peringatan-update-barang-gagal.php');
+  }
+}
+
+// Perbarui saat barang dihapus
+if(isset($_POST['hapusbarang'])){
+  $idbarang = $_POST['idbarang'];
+  $hapus = mysqli_query($conn, "DELETE FROM stok WHERE idbarang='$idbarang'");
+  if($hapus){
+    header('location:index.php');
+  } else {
+    header('location:index.php');
+  }
+}
+
+// Menghapus barang masuk
+if(isset($_POST['hapusbarangmasuk'])){
+  $idmasuk = $_POST['idmasuk'];
+  $idbarang = $_POST['idbarang'];
+  $get_qty = mysqli_query($conn, "SELECT qty FROM masuk WHERE idmasuk='$idmasuk'");
   if($get_qty && mysqli_num_rows($get_qty) > 0){
     $row = mysqli_fetch_assoc($get_qty);
     $qty = $row['qty'];
-    $hapus_keluar = mysqli_query($conn, "DELETE FROM keluar WHERE idkeluar='$idkeluar'");
+    $hapus_masuk = mysqli_query($conn, "DELETE FROM masuk WHERE idmasuk='$idmasuk'");
     $update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang = jumlahbarang - $qty WHERE idbarang='$idbarang'");
-    if($hapus_keluar && $update_stok){
-      header('location: barang-masuk.php');
+    if($hapus_masuk && $update_stok){
+      header('location:barang-masuk.php');
     } else {
       echo 'Gagal mengupdate stok!';
     }
@@ -188,6 +206,75 @@ if(isset($_POST['hapusbarangkeluar'])){
   }
 }
 
+// Perbarui barang masuk
+if(isset($_POST['updatebarangmasuk'])){
+  $idbarang = $_POST['idbarang'];
+  $idmasuk = $_POST['idmasuk'];
+  $qty = $_POST['qty'];
+  $result_cek_stok_sekarang = mysqli_query($conn, "SELECT * FROM stok WHERE idbarang='$idbarang'");
+  $result_ambil_data = mysqli_fetch_array($result_cek_stok_sekarang);
+  $stoksekarang = $result_ambil_data['jumlahbarang'];
+  $result_cek_qty_sekarang = mysqli_query($conn, "SELECT * FROM masuk WHERE idmasuk='$idmasuk'");
+  $result_ambil_qty = mysqli_fetch_array($result_cek_qty_sekarang);
+  $qtysekarang = $result_ambil_qty['qty'];
+  $selisih = $qty - $qtysekarang;
+  $stokbaru = $stoksekarang + $selisih;
+  $result_update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$stokbaru' WHERE idbarang='$idbarang'");
+  $result_update_qty = mysqli_query($conn, "UPDATE masuk SET qty='$qty' WHERE idmasuk='$idmasuk'");
+  if ($result_update_stok && $result_update_qty) {
+    header('location:barang-masuk.php');
+  } else {
+    echo 'Gagal mengubah data barang masuk!';
+    header('location:barang-masuk.php');
+  }
+}
+
+// Menambah barang keluar
+if(isset($_POST['barangkeluar'])){
+  $barangnya = $_POST['barangnya'];
+  $qty = $_POST['qty'];
+  $result_cek_stok_sekarang = mysqli_query($conn, "SELECT * FROM stok WHERE idbarang='$barangnya'");
+  $result_ambil_data = mysqli_fetch_array($result_cek_stok_sekarang);
+  $result_stok_sekarang = $result_ambil_data['jumlahbarang'];
+  if($qty > $result_stok_sekarang) {
+    header('location:../pages/peringatan-jika-barang-keluar-melebihi-stok-yang-ada.php');
+    exit();
+  }
+  $result_tambah_stok_sekarang = $result_stok_sekarang - $qty;
+  $result_keluar = mysqli_query($conn, "INSERT INTO keluar (idbarang, qty) VALUES ('$barangnya','$qty')");
+  $result_update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$result_tambah_stok_sekarang' WHERE idbarang='$barangnya'");
+  if($result_keluar && $result_update_stok){
+    header('location:barang-keluar.php');
+  } else {
+    header('location:barang-keluar.php');
+  }
+}
+
+// Menghapus barang keluar
+if(isset($_POST['hapusbarangkeluar'])){
+  $idkeluar = $_POST['idkeluar'];
+  $idbarang = $_POST['idbarang'];
+  $get_qty = mysqli_query($conn, "SELECT qty FROM keluar WHERE idkeluar='$idkeluar'");
+  if($get_qty && mysqli_num_rows($get_qty) > 0){
+    $row = mysqli_fetch_assoc($get_qty);
+    $qty = $row['qty'];
+    $hapus_keluar = mysqli_query($conn, "DELETE FROM keluar WHERE idkeluar='$idkeluar'");
+    if($hapus_keluar){
+      $update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang = jumlahbarang + $qty WHERE idbarang='$idbarang'");
+      if($update_stok){
+        header('location: barang-masuk.php');
+      } else {
+        echo 'Gagal mengupdate stok!';
+      }
+    } else {
+      echo 'Gagal menghapus data barang keluar!';
+    }
+  } else {
+    echo 'Data keluar tidak ditemukan!';
+  }
+}
+
+// Perbarui barang keluar
 if(isset($_POST['updatebarangkeluar'])){
   $idbarang = $_POST['idbarang'];
   $idkeluar = $_POST['idkeluar'];
@@ -199,14 +286,13 @@ if(isset($_POST['updatebarangkeluar'])){
   $result_ambil_qty = mysqli_fetch_array($result_cek_qty_sekarang);
   $qtysekarang = $result_ambil_qty['qty'];
   $selisih = $qty - $qtysekarang;
-  $stokbaru = $stoksekarang + $selisih;
+  $stokbaru = $stoksekarang - $selisih;
   $result_update_stok = mysqli_query($conn, "UPDATE stok SET jumlahbarang='$stokbaru' WHERE idbarang='$idbarang'");
   $result_update_qty = mysqli_query($conn, "UPDATE keluar SET qty='$qty' WHERE idkeluar='$idkeluar'");
   if ($result_update_stok && $result_update_qty) {
-    header('location:barang-masuk.php');
+    header('location:barang-keluar.php');
   } else {
-    echo 'Gagal mengubah data barang masuk!';
-    header('location:barang-masuk.php');
+    header('location:barang-keluar.php');
   }
 }
 ?>
