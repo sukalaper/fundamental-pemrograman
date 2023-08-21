@@ -18,7 +18,7 @@ require 'cek.php';
 </head>
 <body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand ps-3" href="./../kelola_stok/index.php">Sukalaper</a>
+    <a class="navbar-brand ps-3" href="../index.php">Inventory Sederhana</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
       <div class="input-group">
@@ -43,18 +43,18 @@ require 'cek.php';
       <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
           <div class="nav">
-            <div class="sb-sidenav-menu-heading">Administrator Page</div>
+            <div class="sb-sidenav-menu-heading"><i class="fa-solid fa-circle"></i> Kelola Barang</div>
             <a class="nav-link" href="../index.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Stok Barang
+              <div class="sb-nav-link-icon"><i class="fas fa-boxes-alt"></i></div>
+              Stok Awal Barang
             </a>
             <a class="nav-link" href="barang-masuk.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Barang Masuk
+              <div class="sb-nav-link-icon"><i class="fas fa-dolly"></i></div>
+              Stok Barang Masuk
             </a>
             <a class="nav-link" href="barang-keluar.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Barang Keluar
+              <div class="sb-nav-link-icon"><i class="fas fa-dolly"></i></div>
+              Stok Barang Keluar
             </a>
             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
