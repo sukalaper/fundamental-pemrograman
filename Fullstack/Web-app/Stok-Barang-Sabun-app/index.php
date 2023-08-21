@@ -18,7 +18,7 @@ require 'kelola_stok/cek.php';
 </head>
 <body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand ps-3" href="index.php">Sukalaper</a>
+    <a class="navbar-brand ps-3" href="index.php">Inventory Sederhana</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
       <div class="input-group">
@@ -40,50 +40,25 @@ require 'kelola_stok/cek.php';
       <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
           <div class="nav">
-            <div class="sb-sidenav-menu-heading">Kelola Barang</div>
+            <div class="sb-sidenav-menu-heading"><i class="fa-solid fa-circle"></i> Kelola Barang</div>
             <a class="nav-link" href="index.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Stok Barang
+              <div class="sb-nav-link-icon"><i class="fas fa-boxes-alt"></i></div>
+              Stok Awal Barang
             </a>
             <a class="nav-link" href="kelola_stok/barang-masuk.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Barang Masuk
+              <div class="sb-nav-link-icon"><i class="fas fa-dolly"></i></div>
+              Stok Barang Masuk
             </a>
             <a class="nav-link" href="kelola_stok/barang-keluar.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Barang Keluar
+              <div class="sb-nav-link-icon"><i class="fas fa-dolly"></i></div>
+              Stok Barang Keluar
             </a>
-            <a class="nav-link" href="Rekapitulasi.php">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-              Rekapitulasi
-            </a> 
-            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-              <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                  Authentication
-                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                  <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="pages/auth/login.php">Login</a>
-                    <a class="nav-link" href="pages/auth/logout.php">Logout</a>
-                    <a class="nav-link" href="register.html">Register</a>
-                    <a class="nav-link" href="password.html">Forgot Password</a>
-                  </nav>
-                </div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                  Error
-                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                  <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="pages/401.html">401 Page</a>
-                    <a class="nav-link" href="pages/404.html">404 Page</a>
-                    <a class="nav-link" href="pages/500.html">500 Page</a>
-                  </nav>
-                </div>
-              </nav>
-            </div>
+            <div class="sb-sidenav-menu-heading"><i class="fa-solid fa-circle"></i> Rekapitulasi</div>
+            <a class="nav-link" href="pages/charts.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-barcode"><</i></div>
+              Laporan Penjualan
+            </a>
+            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion"></div>
           </div>
         </div>
         <div class="sb-sidenav-footer">
