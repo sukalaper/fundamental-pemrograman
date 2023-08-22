@@ -3,12 +3,6 @@
 
 > **Note**: Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat. Pembaruan mungkin akan terus dilakukan.
 
-Proyek toko sabun adalah aplikasi web sederhana yang dibangun atas usaha rumahan pribadi yang menggunakan beberapa teknologi sebagai berikut.
-- `Vim` sebagai teks editor.
-- `PHP 8` untuk logika _backend_.
-- `HTML`, `CSS` untuk tampilan _frontend_.
-- `JavaScript` untuk interaksi antarmuka pengguna.
-
 Aplikasi ini bertujuan untuk mengelola produk-produk sabun yang dijual di toko saya pribadi. Seperti menambah, mengedit, menghapus, dan menampilkan daftar produk.
 
 
@@ -74,4 +68,4 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 - [x] Penambahan notifikasi jika barang keluar melebihi stok barang yang ada.
 - [ ] Ekspor file rekapitulasi penjualan dan laba dalam format ```.pdf``` atau ```.xlsx``` agar proses manajemen lebih mudah.
 - [ ] Perubahan beberapa warna dan tampilan
-- [ ] Dll
+- [x] Dll (Dalam pengerjaan dan sedikit refaktorisasi)
