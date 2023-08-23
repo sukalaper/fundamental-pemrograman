@@ -43,7 +43,7 @@ require 'cek.php';
       <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
           <div class="nav">
-            <div class="sb-sidenav-menu-heading"><i class="fa-solid fa-circle"></i> Kelola Barang</div>
+            <div class="sb-sidenav-menu-heading">Kelola Barang</div>
             <a class="nav-link" href="../index.php">
               <div class="sb-nav-link-icon"><i class="fas fa-boxes-alt"></i></div>
               Stok Awal Barang
@@ -98,9 +98,12 @@ require 'cek.php';
           </div> 
           <div class="card mb-4">
             <div class="card-header">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="float: right;">
-                <span class="fas fa-plus"></span> Tambah Barang Masuk
-              </button>
+            <a href="kelola_stok/export.php" class="btn btn-primary" style="float: right;">
+              <span class="fas fa-plus"></span> Export Data
+            </a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="float: right; margin-right: 8px;">
+              <span class="fas fa-plus"></span> Tambah Barang Masuk
+            </button>
             </div>
             <div class="card-body">
               <table id="datatablesSimple">
