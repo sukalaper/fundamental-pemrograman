@@ -1,7 +1,7 @@
 ## Dokumentasi Proyek Toko Sabun Berbasis Website
 
 
-> **Note**: Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat. Pembaruan mungkin akan terus dilakukan.
+> **Note**: Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat. Pembaruan mungkin akan terus dilakukan. Harap maklum jika ada beberapa perubahan dan saya mungkin lupa untuk menyertakannya.
 
 Aplikasi ini bertujuan untuk mengelola produk-produk sabun yang dijual di toko saya pribadi. Seperti menambah, mengedit, menghapus, dan menampilkan daftar produk.
 
@@ -66,6 +66,6 @@ Fitur ini memungkinkan pengguna untuk menghapus produk dari database. Pengguna d
 - [ ] Menghapus fitur login administrator, apakah saya perlu melakukannya?
 - [x] Penambahan beberapa fitur pada barang keluar.
 - [x] Penambahan notifikasi jika barang keluar melebihi stok barang yang ada.
-- [ ] Ekspor file rekapitulasi penjualan dan laba dalam format ```.pdf``` atau ```.xlsx``` agar proses manajemen lebih mudah.
-- [ ] Perubahan beberapa warna dan tampilan
+- [x] Ekspor file rekapitulasi penjualan dan laba dalam format ```.pdf``` atau ```.xlsx``` agar proses manajemen lebih mudah.
+- [x] Perubahan beberapa warna dan tampilan
 - [x] Dll (Dalam pengerjaan dan sedikit refaktorisasi)
