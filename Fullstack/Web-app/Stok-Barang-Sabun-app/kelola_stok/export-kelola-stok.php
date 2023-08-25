@@ -10,7 +10,7 @@ require 'cek.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
-  <title>Rekapitulasi Penjualan</title>
+  <title>Rekap Penjualan</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -22,41 +22,43 @@ require 'cek.php';
 </head>
 <body>
 <div class="container">
-  <center><h2>Toko Sabun Sukalaper</h2></center>
+  <center style="margin-top: 2em;">
+    <h2 style="margin-bottom: 1em;">Toko Sabun Sukalaper</h2>
+  </center>
   <table id="mauexport" class="data-tables datatable-dark" width="100%" cellspacing="0">
     <thead>
       <tr>
-        <th>No</th>
+        <th>Tanggal</th>
+        <th>ID Barang</th>
         <th>Nama Barang</th>
-        <th>Satuan Berat (g) (mL)</th>
         <th>Harga Modal</th>
         <th>Harga Jual</th>
-        <th>Jumlah Barang</th>
+        <th>Jumlah Barang Terjual</th>
+        <th>Total Pendapatan Bersih</th>
       </tr>
     </thead>
     <tbody>
-      <?php 
-        $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM stok");
-        $i = 1;
+      <?php
+        $result_ambil_semua_data_stok = mysqli_query($conn,"SELECT * FROM keluar K, stok S WHERE S.idbarang = K.idbarang");
         while($data=mysqli_fetch_array($result_ambil_semua_data_stok)){
-          $namabarang = $data['namabarang'];
-          $satuanberat = $data['satuanberat'];
-          $hargamodal = $data['hargamodal'];
-          $hargajual = $data['hargajual'];
-          $jumlahbarang = $data['jumlahbarang'];
-          $idbarang = $data['idbarang'];
+        $tanggal = $data['tanggal'];
+        $idbarang = $data['idbarang'];
+        $namabarang = $data['namabarang'];
+        $hargamodal = $data['hargamodal'];
+        $hargajual = $data['hargajual'];
+        $qty = $data['qty'];
+        $laba = ($hargajual - $hargamodal) * $qty;
       ?>
       <tr>
-        <td><?=$i++;?></td>
-        <td><?=$namabarang;?></td>
-        <td><?=$satuanberat;?></td>
-        <td><?=$hargamodal;?></td>
-        <td><?=$hargajual;?></td>
-        <td><?=$jumlahbarang;?></td>
+        <td><?php echo $tanggal ;?></td>
+        <td><?php echo $idbarang; ?></td>
+        <td><?php echo $namabarang ;?></td>
+        <td><?php echo $hargamodal ;?></td>
+        <td><?php echo $hargajual ;?></td>
+        <td><?php echo $qty ;?></td>
+        <td><?php echo number_format($laba, 3, '.', '');?></td>
       </tr>
-      <?php
-        }; 
-      ?>
+      <?php }?>
     </tbody>
   </table>
 </div>
