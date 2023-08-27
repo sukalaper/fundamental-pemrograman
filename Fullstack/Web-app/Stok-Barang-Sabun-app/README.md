@@ -3,7 +3,9 @@
 
 > **Note**: Proyek ini dibangun untuk keperluan pembelajaran dan bersifat sederhana. Pastikan untuk mengamankan aplikasi jika digunakan dalam lingkungan produksi dengan mempertimbangkan keamanan dan validasi data yang lebih ketat. Pembaruan mungkin akan terus dilakukan. Harap maklum jika ada beberapa perubahan dan saya mungkin lupa untuk menyertakannya.
 >
-> **Insya Allah proyek ini sudah siap untuk tahap _production_. Staging akan terus dilakukan selama mesin yang saya gunakan ada batrenya**.
+> 26/08/23 **Insya Allah proyek ini sudah siap untuk tahap _production_. Staging akan terus dilakukan selama mesin yang saya gunakan ada batrenya**.
+>
+> 28/08/23 - Template akan saya migrasikan ke [Mazer](https://zuramai.github.io/mazer/) (Mungkin akan lambat).
 
 Aplikasi ini bertujuan untuk mengelola produk-produk sabun yang dijual di toko saya pribadi. Seperti menambah, mengedit, menghapus, dan menampilkan daftar produk.
 
